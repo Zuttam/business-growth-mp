@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "SubagentStart": [
+      {
+        "matcher": "SDR Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "mkdir -p business_growth/sales/lead_lists business_growth/sales/campaigns business_growth/sales/templates"
+          }
+        ]
+      },
+      {
+        "matcher": "Account Executive Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "mkdir -p business_growth/sales/opportunities"
+          }
+        ]
+      }
+    ]
+  }
+}

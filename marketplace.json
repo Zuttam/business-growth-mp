@@ -1,0 +1,12 @@
+{
+  "name": "business-growth-marketplace",
+  "description": "A plugin marketplace of skills and subagents for business growth activities",
+  "plugins": [
+    {
+      "name": "opportunity-master",
+      "description": "Sales automation with SDR and Account Executive agents for LinkedIn outreach, lead generation, and pipeline management",
+      "version": "0.1.0",
+      "path": "./opportunity-master"
+    }
+  ]
+}

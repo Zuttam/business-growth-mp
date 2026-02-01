@@ -1,0 +1,19 @@
+{
+  "name": "opportunity-master",
+  "version": "0.1.0",
+  "description": "sales agent assistants including SDR and Account Executive for outreach, lead generation, and pipeline management",
+  "author": {
+    "name": "Matan Zutta"
+  },
+  "keywords": [
+    "sales",
+    "sdr",
+    "linkedin",
+    "outreach",
+    "lead-generation",
+    "prospecting",
+    "campaign",
+    "pipeline",
+    "account-executive"
+  ]
+}
