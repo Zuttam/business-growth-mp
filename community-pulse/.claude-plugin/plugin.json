@@ -1,0 +1,7 @@
+{
+  "name": "community-pulse",
+  "version": "0.1.0",
+  "description": "Social media marketing agent for community engagement across platforms (Reddit, LinkedIn, X, etc.)",
+  "author": { "name": "Matan Zutta" },
+  "keywords": ["marketing", "social", "engagement", "community", "reddit", "linkedin", "x", "twitter"]
+}

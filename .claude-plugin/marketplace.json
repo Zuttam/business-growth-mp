@@ -11,6 +11,18 @@
       "description": "Sales automation with SDR and Account Executive agents for LinkedIn outreach, lead generation, and pipeline management",
       "source": "./opportunity-master",
       "category": "business-marketing"
+    },
+    {
+      "name": "community-pulse",
+      "description": "Social media marketing agent for community engagement across platforms (Reddit, LinkedIn, X, etc.)",
+      "source": "./community-pulse",
+      "category": "business-marketing"
+    },
+    {
+      "name": "ad-alchemist",
+      "description": "Expert advertising agent for Meta, Google, X.com, and YouTube paid campaigns with campaign planning, creative briefs, and optimization workflows",
+      "source": "./ad-alchemist",
+      "category": "business-marketing"
     }
   ]
 }

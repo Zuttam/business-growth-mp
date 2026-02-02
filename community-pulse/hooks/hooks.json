@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SubagentStart": [
+      {
+        "matcher": "Social Marketer Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "mkdir -p business_growth/marketing/social/reddit"
+          }
+        ]
+      }
+    ]
+  }
+}

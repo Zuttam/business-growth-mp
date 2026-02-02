@@ -1,0 +1,18 @@
+{
+  "name": "ad-alchemist",
+  "version": "0.1.0",
+  "description": "Expert advertising agent for Meta, Google, X.com, and YouTube paid campaigns",
+  "author": {
+    "name": "Matan Zutta"
+  },
+  "keywords": [
+    "advertising",
+    "meta-ads",
+    "facebook",
+    "instagram",
+    "google-ads",
+    "paid-media",
+    "campaigns",
+    "funnels"
+  ]
+}

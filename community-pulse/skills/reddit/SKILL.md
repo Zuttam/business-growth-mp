@@ -1,0 +1,97 @@
+---
+name: reddit
+description: |
+  Reddit community engagement and marketing. Use when user wants to:
+  - Find relevant Reddit threads for their business
+  - Engage with Reddit communities (comment, post)
+  - Discover subreddits where their audience hangs out
+  - Track Reddit engagement history
+  - Research Reddit marketing opportunities
+---
+
+# Reddit Community Engagement Skill
+
+## Overview
+
+This skill enables authentic Reddit engagement by discovering relevant threads, crafting helpful responses, and tracking engagement history.
+
+## Actions
+
+| Action | File | When to Use |
+|--------|------|-------------|
+| **Research** | [research.md](./research.md) | Find threads, discover subreddits, build thread database |
+| **Engage** | [engage.md](./engage.md) | Comment on threads or create new posts |
+
+## Data Files
+
+| File | Purpose |
+|------|---------|
+| `/business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
+| `/business_growth/marketing/social/reddit/threads.md` | Discovered threads database |
+| `/business_growth/marketing/social/reddit/engagement_log.md` | Engagement history |
+
+## Quick Start
+
+1. **First time?** → Run **Research** to set up business context and find threads
+2. **Have threads?** → Run **Engage** to comment or post
+
+## Decision Flow
+
+```
+User Request
+    │
+    ├─► "Find threads" / "Research" / "Discover"
+    │       └─► Load research.md
+    │
+    ├─► "Comment" / "Post" / "Engage" / "Reply"
+    │       └─► Load engage.md
+    │
+    └─► Unclear
+            └─► Ask: "Would you like me to research new threads or engage with existing ones?"
+```
+
+---
+
+## Browser MCP Quick Reference
+
+### Get Browser Context
+```
+tabs_context_mcp (get available tabs)
+tabs_create_mcp (create new tab if needed)
+```
+
+### Navigation
+```
+navigate (url, tabId)
+```
+
+### Reading Page
+```
+read_page (tabId) - Get page structure
+get_page_text (tabId) - Get text content
+screenshot - Visual verification
+```
+
+### Finding Elements
+```
+find (query, tabId) - Natural language element search
+```
+
+### Interaction
+```
+form_input (ref, value, tabId) - Fill form fields
+computer (action: "left_click", coordinate, tabId) - Click elements
+computer (action: "scroll", scroll_direction, tabId) - Scroll page
+computer (action: "type", text, tabId) - Type text
+```
+
+---
+
+## Important Notes
+
+1. **Authentication**: User must be logged into Reddit in the browser
+2. **Rate Limits**: Reddit limits posting frequency - wait between actions
+3. **Karma Requirements**: Some subreddits require minimum karma to post
+4. **Shadowbans**: Aggressive posting can trigger Reddit's spam detection
+5. **Authenticity**: Focus on providing value, not promotion
+6. **User Approval**: ALL engagement actions require explicit user confirmation
