@@ -1,18 +1,10 @@
 # Business Growth Marketplace
 
-A plugin marketplace for [Claude Code](https://claude.com/claude-code) providing AI-powered agents and skills for B2B sales automation.
+A plugin marketplace providing AI-powered agents and skills for B2B sales automation.
 
 Part of the [AgentSkills.io](https://agentskills.io/home) ecosystem.
 
-## What is a Plugin Marketplace?
-
-A plugin marketplace is a collection of Claude Code plugins distributed together. Each plugin provides specialized agents, skills, and commands that extend Claude Code's capabilities for specific domains.
-
-This marketplace focuses on **business growth and sales automation**, providing tools for:
-- Lead generation and prospecting
-- LinkedIn outreach campaigns
-- Pipeline management
-- Sales strategy and deal progression
+> **Note:** While optimized for [Claude Code](https://claude.com/claude-code), the skills in this marketplace can be used with any compatible AI assistant (openClaw, etc.).
 
 ## Available Plugins
 
