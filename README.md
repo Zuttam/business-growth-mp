@@ -11,6 +11,8 @@ Part of the [AgentSkills.io](https://agentskills.io/home) ecosystem.
 | Plugin | Description |
 |--------|-------------|
 | [opportunity-master](./opportunity-master/) | Sales automation with SDR and Account Executive agents for LinkedIn prospecting and pipeline management |
+| [ad-alchemist](./ad-alchemist/) | Expert advertising agent for Meta, Google, X.com, and YouTube paid campaigns |
+| [community-pulse](./community-pulse/) | Social media marketing agent for community engagement across platforms (Reddit, LinkedIn, X, etc.) |
 
 ## Installation
 
@@ -76,12 +78,8 @@ business-growth-marketplace/
 ├── .claude-plugin/
 │   └── marketplace.json      # Marketplace registry
 ├── opportunity-master/       # Sales automation plugin
-│   ├── .claude-plugin/
-│   │   └── plugin.json      # Plugin manifest
-│   ├── agents/              # SDR and AE agent definitions
-│   ├── skills/              # Skill implementations
-│   ├── hooks/               # Initialization hooks
-│   └── README.md            # Plugin documentation
+├── ad-alchemist/            # Paid advertising plugin
+├── community-pulse/         # Social media engagement plugin
 └── README.md                # This file
 ```
 
