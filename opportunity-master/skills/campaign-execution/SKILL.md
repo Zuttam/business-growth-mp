@@ -1,14 +1,6 @@
 ---
 name: campaign-execution
-description: Execute LinkedIn outreach campaigns by sending connection requests and messages. Use when user wants to run a campaign, execute outreach, check campaign status, send messages, or track campaign progress.
-user-invocable: true
-arguments:
-  - name: campaign_id
-    description: Campaign ID to execute (e.g., campaign_abc123). If not provided, will show available campaigns.
-    required: false
-  - name: action
-    description: Action to perform - "run" (execute due actions), "status" (check progress), "pause", "resume"
-    required: false
+description: Execute LinkedIn outreach campaigns by sending connection requests and messages. Use when user wants to run a campaign, execute outreach, check campaign status, send messages, or track campaign progress. Can be invoked with optional campaign_id and action (run, status, pause, resume).
 ---
 
 # Campaign Execution Skill

@@ -1,17 +1,6 @@
 ---
 name: lead-research
-description: Research LinkedIn prospects to find personalization opportunities and ice breakers. Use when user wants to research a lead, personalize outreach, find ice breakers, or understand a prospect better.
-user-invocable: true
-arguments:
-  - name: linkedin_url
-    description: LinkedIn profile URL of the lead to research
-    required: false
-  - name: lead_name
-    description: Name of lead to find (if URL not provided)
-    required: false
-  - name: campaign_id
-    description: Campaign ID to associate research with (optional)
-    required: false
+description: Research LinkedIn prospects to find personalization opportunities and ice breakers. Use when user wants to research a lead, personalize outreach, find ice breakers, or understand a prospect better. Can be invoked with linkedin_url, lead_name, or campaign_id.
 ---
 
 # Lead Research Skill

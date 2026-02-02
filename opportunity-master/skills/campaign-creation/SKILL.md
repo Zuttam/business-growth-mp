@@ -1,11 +1,6 @@
 ---
 name: campaign-creation
-description: Create LinkedIn outreach campaigns with personalized messaging sequences. Use when user wants to create a campaign, design outreach, write messaging sequences, or set up automated follow-ups.
-user-invocable: true
-arguments:
-  - name: list_id
-    description: Target lead list ID (e.g., list_abc123). If not provided, will show available lists.
-    required: false
+description: Create LinkedIn outreach campaigns with personalized messaging sequences. Use when user wants to create a campaign, design outreach, write messaging sequences, or set up automated follow-ups. Can be invoked with optional list_id argument (e.g., list_abc123).
 ---
 
 # Campaign Creation Skill

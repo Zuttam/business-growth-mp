@@ -1,11 +1,6 @@
 ---
 name: list-building
-description: Build targeted lead lists from LinkedIn based on ICP criteria. Use when user wants to find prospects, build lead lists, search LinkedIn, define ICP, or gather potential customers.
-user-invocable: true
-arguments:
-  - name: criteria
-    description: ICP criteria or search terms (e.g., "VP Engineering at Series B SaaS companies in SF")
-    required: false
+description: Build targeted lead lists from LinkedIn based on ICP criteria. Use when user wants to find prospects, build lead lists, search LinkedIn, define ICP, or gather potential customers. Can be invoked with optional criteria argument (e.g., "VP Engineering at Series B SaaS companies in SF").
 ---
 
 # List Building Skill
@@ -14,25 +9,40 @@ Build targeted lead lists from LinkedIn based on Ideal Customer Profile (ICP) cr
 
 ## Process
 
+### Step 0: Understanding the Request
+
+Before building lists, understand what the user actually needs.
+
+**Gather context:**
+- Check existing lists in `/business_growth/sales/lead_lists/` to understand prior work
+- Review any existing ICP definitions or campaign history
+- Look at recent commits or notes for context on current sales priorities
+
+**Ask clarifying questions:**
+- One question at a time - don't overwhelm with a checklist
+- Prefer multiple choice when options are clear (e.g., "Are you targeting: (A) Individual contributors, (B) Managers, (C) Directors/VPs, or (D) C-suite?")
+- Open-ended questions are fine when exploring broader needs
+- Focus on understanding: **purpose** (why this list?), **constraints** (timeline, budget, tools), **success criteria** (what makes a good lead?)
+
+**Example questions:**
+- "What's the goal for this outreach - demos, partnerships, or something else?"
+- "Are you targeting existing customers' companies or net-new logos?"
+- "Do you have a specific deal size in mind, or are you casting a wide net?"
+
+**Explore approaches:**
+After understanding requirements, propose 2-3 different approaches:
+- Present options conversationally with trade-offs
+- Lead with your recommended approach and explain why
+- Examples: broad search vs. highly targeted, Sales Navigator vs. basic LinkedIn, company-first vs. person-first search
+
 ### Step 1: Define ICP Criteria
 
-If no criteria provided, ask the user about:
+Once you understand the user's goals from Step 0, nail down the specific criteria. Fill in any gaps by asking targeted questions (one at a time):
 
-1. **Target Titles**: What job titles are you targeting?
-   - Examples: VP Engineering, Head of Product, CTO, Director of Sales
-
-2. **Company Characteristics**:
-   - Industry (SaaS, FinTech, Healthcare, etc.)
-   - Company size (employee count or revenue)
-   - Funding stage (Seed, Series A-D, Public)
-
-3. **Geography**: What locations?
-   - Countries, states, cities
-
-4. **Additional Filters**:
-   - Years in role
-   - Keywords in profile
-   - Specific companies to include/exclude
+- **Target Titles**: VP Engineering, Head of Product, CTO, Director of Sales, etc.
+- **Company Characteristics**: Industry, size (employees/revenue), funding stage
+- **Geography**: Countries, states, cities
+- **Additional Filters**: Years in role, keywords, companies to include/exclude
 
 ### Step 2: Create ICP Document
 
