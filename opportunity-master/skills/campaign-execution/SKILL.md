@@ -53,7 +53,9 @@ Process each lead in the target list:
 #### 4a. Check/Create Execution File
 
 For each lead, check if execution file exists at:
-`/business_growth/sales/campaigns/campaign_<uuid>/leads/<lead_id>/execution.md`
+`/business_growth/sales/campaigns/campaign_<name>/leads/<lead_name>/execution.md`
+
+**Lead Naming**: Generate meaningful snake_case names for leads based on their name and company (e.g., `john_smith_acme`, `sarah_jones_techcorp`). Keep names concise, lowercase with underscores.
 
 If not exists, create it:
 
@@ -64,7 +66,7 @@ If not exists, create it:
 - **Name**: <name>
 - **LinkedIn**: <url>
 - **Company**: <company>
-- **Campaign**: campaign_<uuid>
+- **Campaign**: campaign_<name>   # e.g., campaign_q1_outreach_fintech
 
 ## Status
 - **Current**: pending

@@ -83,13 +83,15 @@ I've been helping similar teams [value prop]. Would love to connect and share so
 
 ### Step 5: Save Campaign
 
-Generate UUID and create `/business_growth/sales/campaigns/campaign_<uuid>/CAMPAIGN.md`:
+Generate a meaningful snake_case name based on campaign purpose and target audience (e.g., `campaign_q1_outreach_fintech`, `campaign_product_launch_series_a`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
+
+Create `/business_growth/sales/campaigns/campaign_<name>/CAMPAIGN.md`:
 
 ```markdown
 # Campaign: <Campaign Name>
 
 ## Metadata
-- **Campaign ID**: campaign_<uuid>
+- **Campaign ID**: campaign_<name>   # e.g., campaign_q1_outreach_fintech
 - **Status**: pending
 - **Target List**: <list_id>
 - **Created**: <ISO timestamp>

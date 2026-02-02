@@ -52,20 +52,22 @@ All data is stored in the `/business_growth/sales/` directory of your project. D
 ```
 /business_growth/sales/
 ├── lead_lists/           # Prospect lists from LinkedIn
-│   └── list_<uuid>/
-│       ├── LIST.md       # Lead data
-│       └── icp.md        # ICP definition
+│   └── list_<name>/                  # e.g., list_sf_series_b_vp_engineering
+│       ├── LIST.md                   # Lead data
+│       └── icp.md                    # ICP definition
 ├── campaigns/            # Outreach campaigns
-│   └── campaign_<uuid>/
-│       ├── CAMPAIGN.md   # Campaign definition
+│   └── campaign_<name>/              # e.g., campaign_q1_outreach_fintech
+│       ├── CAMPAIGN.md               # Campaign definition
 │       └── leads/
-│           └── <lead_id>/
-│               ├── execution.md  # Action log
-│               └── research.md   # Lead research
+│           └── <lead_name>/          # e.g., john_smith_acme
+│               ├── execution.md      # Action log
+│               └── research.md       # Lead research
 ├── opportunities/        # Sales opportunities (AE agent)
-│   └── opp_<uuid>.md
+│   └── opp_<name>.md                 # e.g., opp_acme_corp_enterprise_deal
 └── templates/            # Reusable message templates
 ```
+
+**Naming Convention**: All entity names use snake_case (lowercase with underscores), include key identifying info, and are kept concise (3-5 words max).
 
 ## Usage Examples
 
@@ -78,13 +80,13 @@ All data is stored in the `/business_growth/sales/` directory of your project. D
 ### Create an Outreach Campaign
 
 ```
-/opportunity-master:campaign-creation list_abc123
+/opportunity-master:campaign-creation list_sf_series_b_vp_engineering
 ```
 
 ### Execute Campaign Actions
 
 ```
-/opportunity-master:campaign-execution campaign_xyz789 run
+/opportunity-master:campaign-execution campaign_q1_outreach_fintech run
 ```
 
 ### Research a Prospect

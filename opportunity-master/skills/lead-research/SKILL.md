@@ -129,8 +129,10 @@ Create 3-5 personalized ice breakers based on research:
 ### Step 7: Save Research
 
 Determine save location:
-- If `campaign_id` provided: `/business_growth/sales/campaigns/campaign_<uuid>/leads/<lead_id>/research.md`
-- Otherwise: `/business_growth/sales/lead_research/<lead_id>/research.md`
+- If `campaign_id` provided: `/business_growth/sales/campaigns/campaign_<name>/leads/<lead_name>/research.md`
+- Otherwise: `/business_growth/sales/lead_research/<lead_name>/research.md`
+
+**Lead Naming**: Generate meaningful snake_case names for leads based on their name and company (e.g., `john_smith_acme`, `sarah_jones_techcorp`). Keep names concise, lowercase with underscores, no special characters.
 
 Create research file:
 

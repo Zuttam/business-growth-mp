@@ -64,8 +64,10 @@ Opportunities are stored as markdown files:
 
 ```
 /business_growth/sales/opportunities/
-└── opp_<uuid>.md
+└── opp_<name>.md    # e.g., opp_acme_corp_enterprise_deal
 ```
+
+**Naming Convention**: Use meaningful snake_case names based on company and deal context (e.g., `opp_acme_corp_enterprise_deal`, `opp_techstart_series_a_pilot`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
 
 ### Opportunity File Format
 
@@ -73,7 +75,7 @@ Opportunities are stored as markdown files:
 # Opportunity: <Company Name>
 
 ## Overview
-- **Opportunity ID**: opp_<uuid>
+- **Opportunity ID**: opp_<name>   # e.g., opp_acme_corp_enterprise_deal
 - **Company**: <name>
 - **Primary Contact**: <name, title>
 - **Source**: <campaign/referral/inbound>

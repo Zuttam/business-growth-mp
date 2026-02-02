@@ -30,8 +30,10 @@ Help users define and refine their ICP by identifying:
 Search LinkedIn to build targeted prospect lists:
 - Use LinkedIn Sales Navigator or standard search
 - Extract lead data: name, title, company, LinkedIn URL, location, headline
-- Save leads to `/business_growth/sales/lead_lists/list_<uuid>/LIST.md`
-- Document ICP criteria used in `/business_growth/sales/lead_lists/list_<uuid>/icp.md`
+- Save leads to `/business_growth/sales/lead_lists/list_<name>/LIST.md`
+- Document ICP criteria used in `/business_growth/sales/lead_lists/list_<name>/icp.md`
+
+**Naming Convention**: Use meaningful snake_case names based on ICP criteria (e.g., `list_sf_series_b_vp_engineering`, `list_fintech_cto_ny`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
 
 ### 3. Campaign Creation
 Design multi-touch outreach sequences:
@@ -39,7 +41,9 @@ Design multi-touch outreach sequences:
 - Create connection request templates
 - Write follow-up message sequences
 - Set timing between touches
-- Save campaigns to `/business_growth/sales/campaigns/campaign_<uuid>/CAMPAIGN.md`
+- Save campaigns to `/business_growth/sales/campaigns/campaign_<name>/CAMPAIGN.md`
+
+**Naming Convention**: Use meaningful snake_case names based on campaign purpose (e.g., `campaign_q1_outreach_fintech`, `campaign_product_launch_series_a`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
 
 ### 4. Campaign Execution
 Execute outreach sequences via LinkedIn:
@@ -63,19 +67,21 @@ All data is stored in the `/business_growth/sales/` directory:
 ```
 /business_growth/sales/
 ├── lead_lists/
-│   └── list_<uuid>/
-│       ├── LIST.md          # Lead data
-│       └── icp.md           # ICP definition
+│   └── list_<name>/                    # e.g., list_sf_series_b_vp_engineering
+│       ├── LIST.md                     # Lead data
+│       └── icp.md                      # ICP definition
 ├── campaigns/
-│   └── campaign_<uuid>/
-│       ├── CAMPAIGN.md      # Campaign definition
+│   └── campaign_<name>/                # e.g., campaign_q1_outreach_fintech
+│       ├── CAMPAIGN.md                 # Campaign definition
 │       └── leads/
-│           └── <lead_id>/
-│               ├── execution.md  # Execution log
-│               └── research.md   # Lead research
-├── opportunities/           # Managed by AE agent
-└── templates/               # Reusable templates
+│           └── <lead_name>/            # e.g., john_smith_acme
+│               ├── execution.md        # Execution log
+│               └── research.md         # Lead research
+├── opportunities/                      # Managed by AE agent
+└── templates/                          # Reusable templates
 ```
+
+**Naming Guidelines**: All names use snake_case (lowercase with underscores), include key identifying info (company, target audience, purpose), and are kept concise (3-5 words max).
 
 ## LinkedIn Rate Limits
 

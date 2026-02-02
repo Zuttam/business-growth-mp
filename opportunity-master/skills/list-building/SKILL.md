@@ -36,7 +36,9 @@ If no criteria provided, ask the user about:
 
 ### Step 2: Create ICP Document
 
-Save ICP definition to `/business_growth/sales/lead_lists/list_<uuid>/icp.md`:
+Generate a meaningful snake_case name based on the ICP criteria (e.g., `list_sf_series_b_vp_engineering`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
+
+Save ICP definition to `/business_growth/sales/lead_lists/list_<name>/icp.md`:
 
 ```markdown
 # ICP Definition
@@ -82,13 +84,13 @@ Use `read_page` to extract structured data from search results or profiles.
 
 ### Step 5: Save Lead List
 
-Create `/business_growth/sales/lead_lists/list_<uuid>/LIST.md`:
+Create `/business_growth/sales/lead_lists/list_<name>/LIST.md`:
 
 ```markdown
 # Lead List: <Descriptive Name>
 
 ## Metadata
-- **List ID**: list_<uuid>
+- **List ID**: list_<name>   # e.g., list_sf_series_b_vp_engineering
 - **Created**: <ISO timestamp>
 - **Source**: LinkedIn Search
 - **ICP**: See icp.md
