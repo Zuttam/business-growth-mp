@@ -9,6 +9,20 @@ Create LinkedIn outreach campaigns with multi-touch messaging sequences targetin
 
 ## Process
 
+### Step 0: Load Defaults
+
+**Check for saved decisions:**
+
+Read `/business_growth/sales/DECISIONS.md` if it exists. This provides:
+- Problem we solve (for value prop messaging)
+- Buyer persona (for tone and framing)
+- Target industries (for relevant examples)
+
+**If DECISIONS.md exists:**
+Ask: "Want to use your saved buyer profile for messaging, or customize for this campaign?"
+- **(A) Use defaults** → Pre-fill value proposition, skip those questions
+- **(B) Customize** → Ask campaign-specific messaging questions
+
 ### Step 1: Select Target Lead List
 
 If `list_id` not provided:
@@ -20,7 +34,7 @@ Verify the list exists and load its contents.
 
 ### Step 2: Define Campaign Strategy
 
-Ask user about campaign goals and messaging:
+Ask user about campaign goals and messaging (skip questions answered in DECISIONS.md if using defaults):
 
 1. **Campaign Goal**: What's the desired outcome?
    - Book meetings
@@ -28,7 +42,7 @@ Ask user about campaign goals and messaging:
    - Share content
    - Event invitations
 
-2. **Value Proposition**: What's the main value for prospects?
+2. **Value Proposition**: What's the main value for prospects? *(may come from DECISIONS.md)*
    - Problem you solve
    - Key benefits
    - Differentiation

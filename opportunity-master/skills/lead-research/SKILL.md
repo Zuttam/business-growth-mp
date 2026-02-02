@@ -9,6 +9,29 @@ Research LinkedIn prospects to gather personalization opportunities, ice breaker
 
 ## Process
 
+### Step 0: Load Defaults
+
+**First, check for saved decisions:**
+
+Read `/business_growth/sales/DECISIONS.md` if it exists. This file stores:
+- Sales Navigator availability
+- Buyer persona and problem we solve (useful for framing research)
+- Target industries (helps identify relevant talking points)
+- Competitors to avoid mentioning
+
+**If DECISIONS.md exists and has Sales Navigator info:**
+- Use the saved preference, no need to ask again
+- Reference the buyer persona to focus research on relevant pain points
+
+**If DECISIONS.md doesn't exist or missing Sales Navigator:**
+Ask: "Do you have LinkedIn Sales Navigator? It provides deeper profile insights."
+
+**Why Sales Navigator matters**:
+- **With Sales Navigator**: Access full profile info, see who viewed them, more activity history, notes/tags
+- **Without Sales Navigator**: Standard profile view, may have limited visibility for non-connections
+
+**Offer to save:** If user answers and no DECISIONS.md exists, offer to save this preference.
+
 ### Step 1: Identify Target Lead
 
 If `linkedin_url` provided:
@@ -25,9 +48,11 @@ If neither provided:
 ### Step 2: Navigate to LinkedIn Profile
 
 1. Get browser context with `tabs_context_mcp`
-2. Navigate to LinkedIn profile URL
+2. Navigate to profile:
+   - **With Sales Navigator**: Use `linkedin.com/sales/lead/<id>` format for richer data
+   - **Without Sales Navigator**: Use standard `linkedin.com/in/<username>` URL
 3. Take screenshot to verify profile loaded
-4. Check for any access restrictions
+4. Check for any access restrictions (may need to be connected for full profile)
 
 ### Step 3: Extract Profile Information
 
