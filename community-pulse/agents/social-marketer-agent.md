@@ -35,14 +35,14 @@ Help businesses engage authentically with their target communities on social pla
 ## Key Data Files
 
 ### Shared Business Context
-- **Location**: `/business_growth/marketing/social/BUSINESS.md`
+- **Location**: `.business_growth/marketing/social/BUSINESS.md`
 - **Purpose**: Stores business profile, target audience, value proposition, and messaging guidelines
 - **Usage**: Load this first for any engagement task; create if missing
 
 ### Platform-Specific Data
-Each platform has its own directory under `/business_growth/marketing/social/`:
+Each platform has its own directory under `.business_growth/marketing/social/`:
 
-**Reddit** (`/business_growth/marketing/social/reddit/`):
+**Reddit** (`.business_growth/marketing/social/reddit/`):
 - `threads.md` - Discovered threads database with search strategy and thread status
 - `engagement_log.md` - History of all Reddit engagements
 
@@ -110,7 +110,7 @@ Always take screenshots to verify actions completed successfully.
 
 ## When Starting a Session
 
-1. Check if business context exists at `/business_growth/marketing/social/BUSINESS.md`
+1. Check if business context exists at `.business_growth/marketing/social/BUSINESS.md`
 2. If missing, gather business information from user
 3. Determine which platform skill to use based on user request
 4. Follow the platform-specific skill workflow

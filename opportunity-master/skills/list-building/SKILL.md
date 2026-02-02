@@ -13,7 +13,7 @@ Build targeted lists of potential buyers from LinkedIn based on Ideal Customer P
 
 **First, check for saved decisions:**
 
-Read `/business_growth/sales/DECISIONS.md` if it exists. This file stores global defaults like:
+Read `.business_growth/sales/DECISIONS.md` if it exists. This file stores global defaults like:
 - Buyer persona and target titles
 - Target industries and exclusions
 - Company segment preferences
@@ -34,7 +34,7 @@ Go through the full discovery process and offer to save answers as defaults at t
 ### Step 0b: Full Discovery (if not using defaults)
 
 **Gather context:**
-- Check existing lists in `/business_growth/sales/lead_lists/` to understand prior work
+- Check existing lists in `.business_growth/sales/lead_lists/` to understand prior work
 - Review any existing ICP definitions or campaign history
 
 **Ask clarifying questions (one at a time):**
@@ -61,7 +61,7 @@ After understanding requirements, propose 2-3 different approaches:
 
 **Save decisions:**
 If user went through full discovery, ask: "Want me to save these as your defaults for future lists?"
-If yes, create/update `/business_growth/sales/DECISIONS.md`
+If yes, create/update `.business_growth/sales/DECISIONS.md`
 
 ### Step 1: Define ICP Criteria
 
@@ -80,7 +80,7 @@ Once you understand the user's goals from Step 0, nail down the specific buyer c
 
 Generate a meaningful snake_case name based on the ICP criteria (e.g., `list_sf_series_b_vp_engineering`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
 
-Save ICP definition to `/business_growth/sales/lead_lists/list_<name>/icp.md`:
+Save ICP definition to `.business_growth/sales/lead_lists/list_<name>/icp.md`:
 
 ```markdown
 # ICP Definition
@@ -143,7 +143,7 @@ Use `read_page` to extract structured data from search results or profiles.
 
 ### Step 5: Save Lead List
 
-Create `/business_growth/sales/lead_lists/list_<name>/LIST.md`:
+Create `.business_growth/sales/lead_lists/list_<name>/LIST.md`:
 
 ```markdown
 # Lead List: <Descriptive Name>
@@ -209,7 +209,7 @@ Suggest to user:
 
 ## Global Decisions File
 
-The `/business_growth/sales/DECISIONS.md` file stores user preferences to avoid repetitive questions:
+The `.business_growth/sales/DECISIONS.md` file stores user preferences to avoid repetitive questions:
 
 ```markdown
 # Sales Decisions & Defaults

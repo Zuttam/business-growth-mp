@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "mkdir -p business_growth/sales/lead_lists business_growth/sales/campaigns business_growth/sales/templates"
+            "command": "mkdir -p .business_growth/sales/lead_lists .business_growth/sales/campaigns .business_growth/sales/templates"
           }
         ]
       },
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "mkdir -p business_growth/sales/opportunities"
+            "command": "mkdir -p .business_growth/sales/opportunities"
           }
         ]
       }

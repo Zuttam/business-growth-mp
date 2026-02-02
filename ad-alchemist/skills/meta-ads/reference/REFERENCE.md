@@ -70,10 +70,10 @@ Meta's current ad delivery system emphasizes:
 
 ## Official Resources
 
-- [Meta Business Help Center](https://www.facebook.com/business/help)
-- [Meta Blueprint](https://www.facebook.com/business/learn)
+- [Meta Business Help Center](https://www.facebook.com/.business/help)
+- [Meta Blueprint](https://www.facebook.com/.business/learn)
 - [Meta for Developers](https://developers.facebook.com/)
-- [Meta Ads Guide](https://www.facebook.com/business/ads-guide)
+- [Meta Ads Guide](https://www.facebook.com/.business/ads-guide)
 
 ## When to Consult Each Reference
 

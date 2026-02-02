@@ -26,9 +26,9 @@ This skill enables authentic Reddit engagement by discovering relevant threads, 
 
 | File | Purpose |
 |------|---------|
-| `/business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
-| `/business_growth/marketing/social/reddit/threads.md` | Discovered threads database |
-| `/business_growth/marketing/social/reddit/engagement_log.md` | Engagement history |
+| `.business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
+| `.business_growth/marketing/social/reddit/threads.md` | Discovered threads database |
+| `.business_growth/marketing/social/reddit/engagement_log.md` | Engagement history |
 
 ## Quick Start
 

@@ -12,7 +12,7 @@ Execute LinkedIn outreach campaigns by performing due actions and tracking progr
 ### Step 1: Load Campaign
 
 If `campaign_id` not provided:
-1. Search for campaigns in `/business_growth/sales/campaigns/`
+1. Search for campaigns in `.business_growth/sales/campaigns/`
 2. Display campaigns with status and progress
 3. Ask user to select campaign
 
@@ -45,7 +45,7 @@ Process each lead in the target list:
 #### 4a. Check/Create Execution File
 
 For each lead, check if execution file exists at:
-`/business_growth/sales/campaigns/campaign_<name>/leads/<lead_name>/execution.md`
+`.business_growth/sales/campaigns/campaign_<name>/leads/<lead_name>/execution.md`
 
 **Lead Naming**: Generate meaningful snake_case names for leads based on their name and company (e.g., `john_smith_acme`, `sarah_jones_techcorp`). Keep names concise, lowercase with underscores.
 

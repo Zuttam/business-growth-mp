@@ -45,12 +45,12 @@ claude --plugin-dir /path/to/plugin-marketplace/opportunity-master
 
 ## Data Storage
 
-All data is stored in the `/business_growth/sales/` directory of your project. Directories are automatically created when the relevant agent starts:
+All data is stored in the `.business_growth/sales/` directory of your project. Directories are automatically created when the relevant agent starts:
 - SDR Agent creates: `lead_lists/`, `campaigns/`, `templates/`
 - Account Executive Agent creates: `opportunities/`
 
 ```
-/business_growth/sales/
+.business_growth/sales/
 ├── lead_lists/           # Prospect lists from LinkedIn
 │   └── list_<name>/                  # e.g., list_sf_series_b_vp_engineering
 │       ├── LIST.md                   # Lead data

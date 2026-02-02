@@ -16,7 +16,7 @@ Follow these steps to analyze campaign performance and generate optimization rec
 Check for existing campaign plan and performance data:
 
 ```
-/business_growth/marketing/paid/meta/campaigns/campaign_[name]/
+.business_growth/marketing/paid/meta/campaigns/campaign_[name]/
 ├── PLAN.md         # Original campaign strategy
 └── PERFORMANCE.md  # Historical performance data
 ```
@@ -175,7 +175,7 @@ Create a prioritized action plan:
 Save the analysis to:
 
 ```
-/business_growth/marketing/paid/meta/campaigns/campaign_[name]/PERFORMANCE.md
+.business_growth/marketing/paid/meta/campaigns/campaign_[name]/PERFORMANCE.md
 ```
 
 ### Performance Log Entry

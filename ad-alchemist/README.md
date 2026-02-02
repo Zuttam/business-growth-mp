@@ -49,7 +49,7 @@ Detailed reference guides for Meta advertising:
 
 Campaign data is stored in:
 ```
-~/business_growth/marketing/paid/
+~/.business_growth/marketing/paid/
 ├── BUSINESS.md           # Shared business context
 └── meta/
     ├── DECISIONS.md      # Saved preferences

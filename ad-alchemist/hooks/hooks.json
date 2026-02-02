@@ -2,7 +2,7 @@
   "hooks": [
     {
       "event": "SessionStart",
-      "command": "mkdir -p ~/business_growth/marketing/paid/meta/campaigns",
+      "command": "mkdir -p ~/.business_growth/marketing/paid/meta/campaigns",
       "description": "Ensure paid marketing directory structure exists"
     }
   ]

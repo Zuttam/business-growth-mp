@@ -3,7 +3,7 @@
 ## Prerequisites
 
 Before starting research:
-1. Load business context from `/business_growth/marketing/social/BUSINESS.md`
+1. Load business context from `.business_growth/marketing/social/BUSINESS.md`
 2. If missing, create it first (see Step 1 below)
 
 ---
@@ -11,7 +11,7 @@ Before starting research:
 ## Step 0: Load Business Context
 
 ```
-Read /business_growth/marketing/social/BUSINESS.md
+Read .business_growth/marketing/social/BUSINESS.md
 ```
 
 If file doesn't exist, proceed to Step 1. Otherwise, skip to Step 2.
@@ -27,7 +27,7 @@ Ask user for:
 - Value proposition and differentiators
 - Tone and messaging guidelines
 
-Create `/business_growth/marketing/social/BUSINESS.md` with format:
+Create `.business_growth/marketing/social/BUSINESS.md` with format:
 
 ```markdown
 # Business Profile for Social Marketing
@@ -96,7 +96,7 @@ Use `read_page` and `screenshot` to capture thread information.
 
 ## Step 5: Save to Threads Database
 
-Create/update `/business_growth/marketing/social/reddit/threads.md`:
+Create/update `.business_growth/marketing/social/reddit/threads.md`:
 
 ```markdown
 # Reddit Thread Database

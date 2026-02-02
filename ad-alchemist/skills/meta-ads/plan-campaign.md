@@ -16,7 +16,7 @@ Follow these steps sequentially to create a complete campaign plan.
 Check for existing business context:
 
 ```
-/business_growth/marketing/paid/BUSINESS.md
+.business_growth/marketing/paid/BUSINESS.md
 ```
 
 If it exists, read it to understand:
@@ -203,7 +203,7 @@ For each ad, specify:
 Save the complete campaign plan to:
 
 ```
-/business_growth/marketing/paid/meta/campaigns/campaign_[name]/PLAN.md
+.business_growth/marketing/paid/meta/campaigns/campaign_[name]/PLAN.md
 ```
 
 ### Plan Document Structure

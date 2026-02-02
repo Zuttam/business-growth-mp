@@ -13,7 +13,7 @@ Create LinkedIn outreach campaigns with multi-touch messaging sequences targetin
 
 **Check for saved decisions:**
 
-Read `/business_growth/sales/DECISIONS.md` if it exists. This provides:
+Read `.business_growth/sales/DECISIONS.md` if it exists. This provides:
 - Problem we solve (for value prop messaging)
 - Buyer persona (for tone and framing)
 - Target industries (for relevant examples)
@@ -26,7 +26,7 @@ Ask: "Want to use your saved buyer profile for messaging, or customize for this 
 ### Step 1: Select Target Lead List
 
 If `list_id` not provided:
-1. Search for existing lead lists in `/business_growth/sales/lead_lists/`
+1. Search for existing lead lists in `.business_growth/sales/lead_lists/`
 2. Display available lists with metadata
 3. Ask user to select target list
 
@@ -94,7 +94,7 @@ I've been helping similar teams [value prop]. Would love to connect and share so
 
 Generate a meaningful snake_case name based on campaign purpose and target audience (e.g., `campaign_q1_outreach_fintech`, `campaign_product_launch_series_a`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
 
-Create `/business_growth/sales/campaigns/campaign_<name>/CAMPAIGN.md`:
+Create `.business_growth/sales/campaigns/campaign_<name>/CAMPAIGN.md`:
 
 ```markdown
 # Campaign: <Campaign Name>

@@ -3,8 +3,8 @@
 ## Prerequisites
 
 Before engaging:
-1. Business context must exist at `/business_growth/marketing/social/BUSINESS.md`
-2. Threads should be discovered and saved to `/business_growth/marketing/social/reddit/threads.md`
+1. Business context must exist at `.business_growth/marketing/social/BUSINESS.md`
+2. Threads should be discovered and saved to `.business_growth/marketing/social/reddit/threads.md`
 3. User must be logged into Reddit in the browser
 
 ---
@@ -14,7 +14,7 @@ Before engaging:
 ### 1.1: Load and Evaluate Threads
 
 ```
-Read /business_growth/marketing/social/reddit/threads.md
+Read .business_growth/marketing/social/reddit/threads.md
 ```
 
 Evaluate thread fit based on:
@@ -62,7 +62,7 @@ computer (click submit/comment button) → screenshot (verify posted)
 
 ### 1.5: Log Engagement
 
-Update `/business_growth/marketing/social/reddit/engagement_log.md`:
+Update `.business_growth/marketing/social/reddit/engagement_log.md`:
 
 ```markdown
 # Reddit Engagement Log

@@ -13,7 +13,7 @@ Research LinkedIn prospects to gather personalization opportunities, ice breaker
 
 **First, check for saved decisions:**
 
-Read `/business_growth/sales/DECISIONS.md` if it exists. This file stores:
+Read `.business_growth/sales/DECISIONS.md` if it exists. This file stores:
 - Sales Navigator availability
 - Buyer persona and problem we solve (useful for framing research)
 - Target industries (helps identify relevant talking points)
@@ -38,7 +38,7 @@ If `linkedin_url` provided:
 - Use directly for research
 
 If `lead_name` provided:
-- Search in lead lists under `/business_growth/sales/lead_lists/`
+- Search in lead lists under `.business_growth/sales/lead_lists/`
 - Find matching lead and get LinkedIn URL
 
 If neither provided:
@@ -143,8 +143,8 @@ Create 3-5 personalized ice breakers based on research:
 ### Step 7: Save Research
 
 Determine save location:
-- If `campaign_id` provided: `/business_growth/sales/campaigns/campaign_<name>/leads/<lead_name>/research.md`
-- Otherwise: `/business_growth/sales/lead_research/<lead_name>/research.md`
+- If `campaign_id` provided: `.business_growth/sales/campaigns/campaign_<name>/leads/<lead_name>/research.md`
+- Otherwise: `.business_growth/sales/lead_research/<lead_name>/research.md`
 
 **Lead Naming**: Generate meaningful snake_case names for leads based on their name and company (e.g., `john_smith_acme`, `sarah_jones_techcorp`). Keep names concise, lowercase with underscores, no special characters.
 

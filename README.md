@@ -35,14 +35,14 @@ Then ensure the marketplace is accessible to Claude Code by placing it in a know
 Run Claude Code with the plugin directory:
 
 ```bash
-claude --plugin-dir /path/to/business-growth-marketplace/opportunity-master
+claude --plugin-dir /path/to/.business-growth-marketplace/opportunity-master
 ```
 
 ### Option 3: Clone and Reference
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/business-growth-marketplace.git
+   git clone https://github.com/your-username/.business-growth-marketplace.git
    ```
 
 2. Reference in your Claude Code configuration

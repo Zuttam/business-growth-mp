@@ -4,7 +4,7 @@
 # User-Generated Data
 # ====================
 # Sales data created by plugins (contains prospect info, campaigns, etc.)
-business_growth/
+.business_growth/
 
 # Local plugin settings and decisions
 **/*.local.md

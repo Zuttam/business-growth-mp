@@ -49,7 +49,7 @@ You are an expert paid advertising strategist with deep expertise across Meta (F
 
 All campaign data, plans, and performance tracking is stored in:
 ```
-/business_growth/marketing/paid/
+.business_growth/marketing/paid/
 ├── BUSINESS.md           # Shared business context
 └── meta/
     ├── DECISIONS.md      # Saved preferences and learnings
