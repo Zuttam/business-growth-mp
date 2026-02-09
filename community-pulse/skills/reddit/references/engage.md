@@ -4,8 +4,8 @@
 
 Before engaging:
 1. Business context must exist at `.business_growth/marketing/social/BUSINESS.md`
-2. Threads should be discovered and saved to `.business_growth/marketing/social/reddit/threads.md`
-3. User must be logged into Reddit in the browser
+2. Threads should be discovered and saved to `.business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md`
+3. User must be logged into Reddit in the browser (use login skill or log in manually)
 
 ---
 
@@ -14,8 +14,10 @@ Before engaging:
 ### 1.1: Load and Evaluate Threads
 
 ```
-Read .business_growth/marketing/social/reddit/threads.md
+Read .business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md
 ```
+
+If today's file doesn't exist, check previous days or run Research first.
 
 Evaluate thread fit based on:
 - **Recency**: Is the thread still active? (< 24h ideal, < 7d acceptable)
@@ -62,22 +64,10 @@ computer (click submit/comment button) → screenshot (verify posted)
 
 ### 1.5: Log Engagement
 
-Update `.business_growth/marketing/social/reddit/engagement_log.md`:
+Update today's file at `.business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md`, appending to the `## Engagement Log` section:
 
 ```markdown
-# Reddit Engagement Log
-
-## Summary
-- **Total Engagements**: <count>
-- **Comments**: <count>
-- **Posts**: <count>
-- **Last Activity**: <timestamp>
-
-## History
-
-### <date>
-
-#### <timestamp> - Comment
+### HH:MM - Comment
 - **Thread**: <title>
 - **Subreddit**: r/<name>
 - **URL**: <url>
@@ -89,7 +79,7 @@ Update `.business_growth/marketing/social/reddit/engagement_log.md`:
 ---
 ```
 
-Also update thread status in `threads.md` to "engaged".
+Also update the thread's status in the Discovered Threads table to "engaged".
 
 ---
 
@@ -152,7 +142,7 @@ select flair if needed → computer (click post/submit) → screenshot (verify)
 
 ### 2.6: Log Engagement
 
-Update `engagement_log.md` with post details and status.
+Update today's file at `.business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md`, appending to the `## Engagement Log` section with post details and status.
 
 ---
 

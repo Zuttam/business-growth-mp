@@ -94,37 +94,44 @@ Use `read_page` and `screenshot` to capture thread information.
 
 ---
 
-## Step 5: Save to Threads Database
+## Step 5: Save to Date-Based Storage
 
-Create/update `.business_growth/marketing/social/reddit/threads.md`:
+Determine today's date and create the storage path:
+```
+mkdir -p .business_growth/marketing/social/reddit/{YYYY-MM}
+```
+
+Create/update `.business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md`:
 
 ```markdown
-# Reddit Thread Database
+# Reddit Activity - {YYYY-MM-DD}
 
 ## Search Strategy
 - **Target Subreddits**: r/sub1, r/sub2, r/sub3
 - **Keywords**: keyword1, keyword2, keyword3
-- **Last Search**: <timestamp>
+- **Search Time**: HH:MM
 
 ## Discovered Threads
 
 ### High Priority
-| Title | Subreddit | URL | Comments | Age | Relevance | Status |
-|-------|-----------|-----|----------|-----|-----------|--------|
-| Thread title | r/example | https://... | 45 | 2h | Asking about X | new |
+| Time | Title | Subreddit | URL | Comments | Age | Relevance | Status |
+|------|-------|-----------|-----|----------|-----|-----------|--------|
+| HH:MM | Thread title | r/example | https://... | 45 | 2h | Asking about X | new |
 
 ### Medium Priority
-| Title | Subreddit | URL | Comments | Age | Relevance | Status |
-|-------|-----------|-----|----------|-----|-----------|--------|
+| Time | Title | Subreddit | URL | Comments | Age | Relevance | Status |
+|------|-------|-----------|-----|----------|-----|-----------|--------|
 
 ### Low Priority / Archive
-| Title | Subreddit | URL | Comments | Age | Relevance | Status |
-|-------|-----------|-----|----------|-----|-----------|--------|
+| Time | Title | Subreddit | URL | Comments | Age | Relevance | Status |
+|------|-------|-----------|-----|----------|-----|-----------|--------|
 
-### Engaged Threads
-| Title | Subreddit | Date Engaged | Type | URL |
-|-------|-----------|--------------|------|-----|
+## Engagement Log
+
+(Entries added by engage.md)
 ```
+
+If the file already exists for today, append new threads to the appropriate priority sections without overwriting existing entries.
 
 ---
 
@@ -133,4 +140,4 @@ Create/update `.business_growth/marketing/social/reddit/threads.md`:
 After completing research, you should have:
 1. Business context saved in `BUSINESS.md`
 2. Search strategy documented
-3. Discovered threads saved to `threads.md` with priority rankings
+3. Discovered threads saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings

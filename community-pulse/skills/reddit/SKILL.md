@@ -19,20 +19,21 @@ This skill enables authentic Reddit engagement by discovering relevant threads, 
 
 | Action | File | When to Use |
 |--------|------|-------------|
-| **Research** | [research.md](./research.md) | Find threads, discover subreddits, build thread database |
-| **Engage** | [engage.md](./engage.md) | Comment on threads or create new posts |
+| **Login** | [references/login.md](./references/login.md) | Authenticate with Reddit before engaging |
+| **Research** | [references/research.md](./references/research.md) | Find threads, discover subreddits, build thread database |
+| **Engage** | [references/engage.md](./references/engage.md) | Comment on threads or create new posts |
 
 ## Data Files
 
 | File | Purpose |
 |------|---------|
 | `.business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
-| `.business_growth/marketing/social/reddit/threads.md` | Discovered threads database |
-| `.business_growth/marketing/social/reddit/engagement_log.md` | Engagement history |
+| `.business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md` | Daily threads and engagement log |
+| `community-pulse/skills/reddit/.env.profiles.local` | Reddit credentials (gitignored) |
 
 ## Quick Start
 
-1. **First time?** → Run **Research** to set up business context and find threads
+1. **First time?** → Run **Login** to authenticate, then **Research** to find threads
 2. **Have threads?** → Run **Engage** to comment or post
 
 ## Decision Flow
@@ -40,11 +41,14 @@ This skill enables authentic Reddit engagement by discovering relevant threads, 
 ```
 User Request
     │
+    ├─► "Login" / "Sign in" / "Authenticate"
+    │       └─► Load references/login.md
+    │
     ├─► "Find threads" / "Research" / "Discover"
-    │       └─► Load research.md
+    │       └─► Load references/research.md
     │
     ├─► "Comment" / "Post" / "Engage" / "Reply"
-    │       └─► Load engage.md
+    │       └─► Load references/engage.md
     │
     └─► Unclear
             └─► Ask: "Would you like me to research new threads or engage with existing ones?"
@@ -89,7 +93,7 @@ computer (action: "type", text, tabId) - Type text
 
 ## Important Notes
 
-1. **Authentication**: User must be logged into Reddit in the browser
+1. **Authentication**: Use login skill or ensure manual login before engaging
 2. **Rate Limits**: Reddit limits posting frequency - wait between actions
 3. **Karma Requirements**: Some subreddits require minimum karma to post
 4. **Shadowbans**: Aggressive posting can trigger Reddit's spam detection

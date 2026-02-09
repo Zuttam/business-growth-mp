@@ -4,6 +4,7 @@ description: |
   Social media marketing and community engagement agent. Triggers when user asks about:
   - Social media marketing or community engagement
   - Reddit marketing, posting, commenting, or thread discovery
+  - Hacker News posting, commenting, Ask HN, Show HN, or HN thread discovery
   - LinkedIn outreach or engagement (future)
   - X/Twitter marketing or engagement (future)
   - Finding relevant discussions or threads to engage with
@@ -40,11 +41,13 @@ Help businesses engage authentically with their target communities on social pla
 - **Usage**: Load this first for any engagement task; create if missing
 
 ### Platform-Specific Data
-Each platform has its own directory under `.business_growth/marketing/social/`:
+Each platform has its own directory under `.business_growth/marketing/social/`, using date-based storage:
 
-**Reddit** (`.business_growth/marketing/social/reddit/`):
-- `threads.md` - Discovered threads database with search strategy and thread status
-- `engagement_log.md` - History of all Reddit engagements
+**Reddit** (`.business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md`):
+- Daily file combining discovered threads and engagement log
+
+**Hacker News** (`.business_growth/marketing/social/hackernews/{YYYY-MM}/{YYYY-MM-DD}.md`):
+- Daily file combining discovered threads and engagement log
 
 **Future Platforms** (to be added):
 - `/linkedin/` - LinkedIn engagement data
@@ -112,5 +115,8 @@ Always take screenshots to verify actions completed successfully.
 
 1. Check if business context exists at `.business_growth/marketing/social/BUSINESS.md`
 2. If missing, gather business information from user
-3. Determine which platform skill to use based on user request
-4. Follow the platform-specific skill workflow
+3. Determine which platform skill to use based on user request:
+   - Reddit-related → load `community-pulse/skills/reddit/SKILL.md`
+   - Hacker News / HN-related → load `community-pulse/skills/hackernews/SKILL.md`
+4. Check if user is authenticated on the target platform; if not, offer to run the login skill
+5. Follow the platform-specific skill workflow
