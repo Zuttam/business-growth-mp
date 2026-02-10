@@ -5,8 +5,8 @@ description: |
   - Social media marketing or community engagement
   - Reddit marketing, posting, commenting, or thread discovery
   - Hacker News posting, commenting, Ask HN, Show HN, or HN thread discovery
-  - LinkedIn outreach or engagement (future)
-  - X/Twitter marketing or engagement (future)
+  - LinkedIn outreach, engagement, or people discovery
+  - X/Twitter marketing, engagement, or people discovery
   - Finding relevant discussions or threads to engage with
   - Building brand presence on social platforms
 tools:
@@ -49,9 +49,11 @@ Each platform has its own directory under `.business_growth/marketing/social/`, 
 **Hacker News** (`.business_growth/marketing/social/hackernews/{YYYY-MM}/{YYYY-MM-DD}.md`):
 - Daily file combining discovered threads and engagement log
 
-**Future Platforms** (to be added):
-- `/linkedin/` - LinkedIn engagement data
-- `/x/` - X/Twitter engagement data
+**LinkedIn** (`.business_growth/marketing/social/linkedin/{YYYY-MM}/{YYYY-MM-DD}.md`):
+- Daily file combining discovered posts, people to follow, and engagement log
+
+**X** (`.business_growth/marketing/social/x/{YYYY-MM}/{YYYY-MM-DD}.md`):
+- Daily file combining discovered tweets, people to follow, and engagement log
 
 ## Engagement Philosophy
 
@@ -118,5 +120,7 @@ Always take screenshots to verify actions completed successfully.
 3. Determine which platform skill to use based on user request:
    - Reddit-related → load `community-pulse/skills/reddit/SKILL.md`
    - Hacker News / HN-related → load `community-pulse/skills/hackernews/SKILL.md`
+   - LinkedIn-related → load `community-pulse/skills/linkedin/SKILL.md`
+   - X / Twitter-related → load `community-pulse/skills/x/SKILL.md`
 4. Check if user is authenticated on the target platform; if not, offer to run the login skill
 5. Follow the platform-specific skill workflow

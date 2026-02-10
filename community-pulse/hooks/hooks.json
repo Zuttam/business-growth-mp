@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "mkdir -p .business_growth/marketing/social/reddit .business_growth/marketing/social/hackernews"
+            "command": "mkdir -p .business_growth/marketing/social/reddit .business_growth/marketing/social/hackernews .business_growth/marketing/social/linkedin .business_growth/marketing/social/x"
           }
         ]
       }
