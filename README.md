@@ -1,6 +1,6 @@
-# Business Growth Marketplace
+# Business Growth Plugin Marketplace
 
-A plugin marketplace providing AI-powered agents and skills for B2B sales automation.
+A plugin marketplace providing AI-powered agents and skills for sales & marketing automation.
 
 Part of the [AgentSkills.io](https://agentskills.io/home) ecosystem.
 
