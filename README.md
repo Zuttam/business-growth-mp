@@ -16,9 +16,17 @@ Part of the [AgentSkills.io](https://agentskills.io/home) ecosystem.
 
 ## Installation
 
-### Option 1: Add to Project Settings (Recommended)
+### Recommended: Install via Skills CLI
 
-Add to your project's `.claude/settings.json`:
+For any skills-supporting agent (Claude Code, openClaw, etc.):
+
+```bash
+npx skills add https://github.com/Zuttam/business-growth-mp
+```
+
+### Alternative: Claude Code Native Plugin
+
+If you're using Claude Code, add to your project's `.claude/settings.json`:
 
 ```json
 {
@@ -28,30 +36,27 @@ Add to your project's `.claude/settings.json`:
 }
 ```
 
-Then ensure the marketplace is accessible to Claude Code by placing it in a known plugins directory or referencing it directly.
-
-### Option 2: Use Plugin Directory Flag
-
-Run Claude Code with the plugin directory:
+### Alternative: Plugin Directory Flag
 
 ```bash
-claude --plugin-dir /path/to/.business-growth-marketplace/opportunity-master
+claude --plugin-dir /path/to/business-growth-marketplace/opportunity-master
 ```
 
-### Option 3: Clone and Reference
+### Alternative: Clone and Reference
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/.business-growth-marketplace.git
-   ```
+```bash
+git clone https://github.com/Zuttam/business-growth-mp.git
+```
 
-2. Reference in your Claude Code configuration
+Then reference in your Claude Code configuration.
 
 ## Prerequisites
 
-- **Claude Code CLI** - Install from [claude.com/claude-code](https://claude.com/claude-code)
-- **Claude in Chrome Extension** - Required for browser automation (LinkedIn interactions)
-- Active LinkedIn session in browser
+- **Browser MCP** - A browser automation MCP is required for web interactions (LinkedIn, Reddit, etc.). Supported options include:
+  - [Claude in Chrome Extension](https://chromewebstore.google.com/detail/claude-in-chrome) (Recommended)
+  - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
+  - Any other browser automation MCP
+- Active sessions in the browser for relevant platforms (LinkedIn, Reddit, X, etc.)
 
 ## Quick Start
 
