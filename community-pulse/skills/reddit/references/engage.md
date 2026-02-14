@@ -144,6 +144,105 @@ select flair if needed → computer (click post/submit) → screenshot (verify)
 
 Update today's file at `.business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md`, appending to the `## Engagement Log` section with post details and status.
 
+## Option 3: Check Notifications & Follow Up
+
+Run this as part of every daily engagement session, ideally before posting new comments. Check each active profile for replies, upvotes, and threads that need attention.
+
+### 3.1: Load Active Profiles
+
+```
+Read .business_growth/marketing/social/reddit/.env.profiles.local
+```
+
+Identify all profiles that have posted in the last 3 days by checking recent daily comment files.
+
+### 3.2: Log Into Each Profile & Check Notifications
+
+For each profile that has recent activity:
+
+```
+Log in (see login.md) → navigate to https://www.reddit.com/notifications →
+screenshot → read_page or get_page_text
+```
+
+Review notifications for:
+- **Direct replies** to your comments (highest priority - someone engaged with you)
+- **Upvote milestones** on your comments (signals resonance)
+- **OP replies** to your comments (very high priority - the thread author responded)
+- **Mentions** or tags in other threads
+
+### 3.3: Evaluate Which Replies Need a Response
+
+Not every reply needs a follow-up. Respond when:
+- Someone asks a follow-up question
+- OP engages with your comment directly
+- Someone challenges your point with a substantive argument (opportunity to deepen credibility)
+- A reply creates an opening to add more value without being pushy
+
+Skip responding when:
+- The reply is just agreement ("great point", "+1")
+- The thread has gone cold (>48h since last activity)
+- Engaging would look like you're trying to get the last word
+- The reply is hostile or trolling (never engage with bad faith)
+
+### 3.4: Draft & Post Follow-Up Replies
+
+For replies worth responding to:
+
+```
+navigate (comment permalink) → find (Reply button under the reply) →
+computer (click) → type (response) → computer (click submit) → screenshot
+```
+
+Follow-up reply guidelines:
+- Keep it shorter than your original comment
+- Be conversational, not lecturing
+- Thank OP if they validated your point
+- Add one new insight max - don't repeat yourself
+- Match the energy of the person you're replying to
+
+### 3.5: ASK USER FOR APPROVAL
+
+**CRITICAL**: Before posting any follow-up reply, present to user:
+```
+Profile: <profile name>
+Thread: <title>
+Their reply: <what they said>
+
+Proposed response:
+---
+<drafted reply>
+---
+
+Should I post this reply? (yes/no)
+```
+
+**Wait for explicit "yes" before proceeding.**
+
+### 3.6: Log Follow-Ups
+
+Update the daily comments file with a follow-up section:
+
+```markdown
+## Follow-Up Activity - {YYYY-MM-DD}
+
+### Profile: <username>
+- **Thread**: <title> (r/<subreddit>)
+- **Original comment**: Comment <#> from <date>
+- **Their reply**: <summary of what they said>
+- **Our response**: <what we replied>
+- **Upvotes on original**: <current count>
+```
+
+### 3.7: Check Previously Engaged Threads
+
+Also spot-check 2-3 threads from the past 2-3 days (already tracked in threads.md "PREVIOUSLY ENGAGED THREADS" section):
+- Has the comment gained upvotes? (signal of resonance)
+- Has the thread grown significantly? (opportunity for a second natural comment if the conversation evolved)
+- Has anyone replied that we missed via notifications?
+
+Update the next day's threads.md with current engagement numbers.
+
 ---
 
 ## Engagement Philosophy

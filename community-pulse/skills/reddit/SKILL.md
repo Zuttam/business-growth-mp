@@ -1,12 +1,6 @@
 ---
 name: reddit
-description: |
-  Reddit community engagement and marketing. Use when user wants to:
-  - Find relevant Reddit threads for their business
-  - Engage with Reddit communities (comment, post)
-  - Discover subreddits where their audience hangs out
-  - Track Reddit engagement history
-  - Research Reddit marketing opportunities
+description: Reddit community engagement and marketing. Use when user wants to: (a) Find relevant Reddit threads for their business; (b) Engage with Reddit communities (comment, post); (c) Discover subreddits where their audience hangs out; (d) Track Reddit engagement history; (e) Research Reddit marketing opportunities.
 ---
 
 # Reddit Community Engagement Skill
@@ -21,7 +15,7 @@ This skill enables authentic Reddit engagement by discovering relevant threads, 
 |--------|------|-------------|
 | **Login** | [references/login.md](./references/login.md) | Authenticate with Reddit before engaging |
 | **Research** | [references/research.md](./references/research.md) | Find threads, discover subreddits, build thread database |
-| **Engage** | [references/engage.md](./references/engage.md) | Comment on threads or create new posts |
+| **Engage** | [references/engage.md](./references/engage.md) | Comment on threads, create new posts, or check notifications |
 
 ## Data Files
 
@@ -49,6 +43,12 @@ User Request
     │
     ├─► "Comment" / "Post" / "Engage" / "Reply"
     │       └─► Load references/engage.md
+    │
+    ├─► "Check notifications" / "Check replies" / "Follow up"
+    │       └─► Load references/engage.md (Option 3)
+    │
+    ├─► "Execute today's strategy" / "Run daily strategy"
+    │       └─► Load references/engage.md (Option 3 first, then Option 1)
     │
     └─► Unclear
             └─► Ask: "Would you like me to research new threads or engage with existing ones?"
