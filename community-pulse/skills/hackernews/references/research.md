@@ -3,22 +3,76 @@
 ## Prerequisites
 
 Before starting research:
-1. Load business context from `.business_growth/marketing/social/BUSINESS.md`
-2. If missing, create it first (see Step 1 below)
+1. Load Hacker News engagement strategy from `.business_growth/marketing/social/hackernews/strategy.md`
+2. Load business context from `.business_growth/marketing/social/BUSINESS.md`
+3. If either is missing, create them first (see steps below)
 
 ---
 
-## Step 0: Load Business Context
+## Step 0: Load Hacker News Engagement Strategy
+
+```
+Read .business_growth/marketing/social/hackernews/strategy.md
+```
+
+If file doesn't exist, ask the user: **"No Hacker News engagement strategy found. Would you like to create one? This defines your overall approach to HN — topics of expertise, engagement rules, and goals."**
+
+If user says **yes**, gather the following and create the file:
+- **Goal**: What do you want to achieve on HN? (thought leadership, community presence, traffic, feedback on product)
+- **Expertise Areas**: What technical topics can you comment on with genuine depth?
+- **Content Themes**: What types of discussions are most relevant? (technical deep-dives, industry analysis, product feedback)
+- **Engagement Rules**: Any constraints? (e.g., never self-promote directly, only comment when adding unique insight, max comments per day)
+- **Tone & Voice**: How should comments sound? (technical expert, curious builder, data-driven analyst)
+- **Sections to Focus**: Which HN sections matter most? (front page, Ask HN, Show HN, new)
+- **Metrics to Track**: What signals success? (karma, replies, upvotes, referral traffic)
+
+Create `.business_growth/marketing/social/hackernews/strategy.md` with format:
+
+```markdown
+# Hacker News Engagement Strategy
+
+## Goal
+<what we want to achieve on HN>
+
+## Expertise Areas
+- <area 1>: <depth of knowledge and angle>
+- <area 2>: <depth of knowledge and angle>
+
+## Content Themes
+- <theme 1>: <description>
+- <theme 2>: <description>
+
+## Engagement Rules
+- <rule 1>
+- <rule 2>
+
+## Tone & Voice
+<description of how comments should sound>
+
+## Sections to Focus
+- <section>: <why and how often>
+
+## Metrics & Goals
+- <metric>: <target>
+
+## Last Updated: <timestamp>
+```
+
+If user says **no**, proceed without a strategy (use business context alone).
+
+---
+
+## Step 1: Load Business Context
 
 ```
 Read .business_growth/marketing/social/BUSINESS.md
 ```
 
-If file doesn't exist, proceed to Step 1. Otherwise, skip to Step 2.
+If file doesn't exist, proceed to Step 1b. Otherwise, skip to Step 2.
 
 ---
 
-## Step 1: Create Business Context (if missing)
+## Step 1b: Create Business Context (if missing)
 
 Ask user for:
 - Product/service description
@@ -58,10 +112,11 @@ Create `.business_growth/marketing/social/BUSINESS.md` with format:
 
 ## Step 2: Generate HN Search Strategy
 
-Based on business context, determine:
+Based on the engagement strategy (if available) and business context, determine:
 - **Search Keywords**: What technical topics, problems, or questions relate to the business?
 - **Thread Types**: Stories, Ask HN, Show HN, comments
-- **Sections to Monitor**: Front page, new, ask, show, best
+- **Sections to Monitor**: Use sections from strategy.md if defined, otherwise cover front page, new, ask, show, best
+- **Engagement Rules**: Respect any constraints defined in the strategy (e.g., expertise-only commenting, tone requirements)
 
 ---
 
@@ -154,6 +209,7 @@ If the file already exists for today, append new threads to the appropriate prio
 ## Output
 
 After completing research, you should have:
-1. Business context saved in `BUSINESS.md`
-2. Search strategy documented
-3. Discovered threads saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings
+1. Hacker News engagement strategy saved in `strategy.md` (if user chose to create one)
+2. Business context saved in `BUSINESS.md`
+3. Search strategy documented
+4. Discovered threads saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings

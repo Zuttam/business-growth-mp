@@ -3,22 +3,78 @@
 ## Prerequisites
 
 Before starting research:
-1. Load business context from `.business_growth/marketing/social/BUSINESS.md`
-2. If missing, create it first (see Step 1 below)
+1. Load LinkedIn engagement strategy from `.business_growth/marketing/social/linkedin/strategy.md`
+2. Load business context from `.business_growth/marketing/social/BUSINESS.md`
+3. If either is missing, create them first (see steps below)
 
 ---
 
-## Step 0: Load Business Context
+## Step 0: Load LinkedIn Engagement Strategy
+
+```
+Read .business_growth/marketing/social/linkedin/strategy.md
+```
+
+If file doesn't exist, ask the user: **"No LinkedIn engagement strategy found. Would you like to create one? This defines your overall approach to LinkedIn — target audiences, content pillars, engagement rules, and goals."**
+
+If user says **yes**, gather the following and create the file:
+- **Goal**: What do you want to achieve on LinkedIn? (thought leadership, lead generation, brand awareness, network building)
+- **Target Audiences**: Who do you want to reach? (job titles, industries, company sizes)
+- **Content Pillars**: What topics/expertise should posts and comments focus on?
+- **Engagement Rules**: Any constraints? (e.g., comment-first strategy, max posts per week, avoid competitors' posts)
+- **Tone & Voice**: How should comments/posts sound? (authoritative expert, collaborative peer, industry insider)
+- **Hashtag Strategy**: Key hashtags to use and monitor
+- **Metrics to Track**: What signals success? (impressions, comments, connection requests, profile views)
+
+Create `.business_growth/marketing/social/linkedin/strategy.md` with format:
+
+```markdown
+# LinkedIn Engagement Strategy
+
+## Goal
+<what we want to achieve on LinkedIn>
+
+## Target Audiences
+| Audience | Job Titles | Industries | Why |
+|----------|-----------|------------|-----|
+| <segment> | <titles> | <industries> | <reason> |
+
+## Content Pillars
+- <pillar 1>: <description>
+- <pillar 2>: <description>
+
+## Engagement Rules
+- <rule 1>
+- <rule 2>
+
+## Tone & Voice
+<description of how comments/posts should sound>
+
+## Hashtag Strategy
+- Primary: <hashtags to use regularly>
+- Monitor: <hashtags to watch for engagement opportunities>
+
+## Metrics & Goals
+- <metric>: <target>
+
+## Last Updated: <timestamp>
+```
+
+If user says **no**, proceed without a strategy (use business context alone).
+
+---
+
+## Step 1: Load Business Context
 
 ```
 Read .business_growth/marketing/social/BUSINESS.md
 ```
 
-If file doesn't exist, proceed to Step 1. Otherwise, skip to Step 2.
+If file doesn't exist, proceed to Step 1b. Otherwise, skip to Step 2.
 
 ---
 
-## Step 1: Create Business Context (if missing)
+## Step 1b: Create Business Context (if missing)
 
 Ask user for:
 - Product/service description
@@ -58,11 +114,12 @@ Create `.business_growth/marketing/social/BUSINESS.md` with format:
 
 ## Step 2: Generate LinkedIn Search Strategy
 
-Based on business context, determine:
+Based on the engagement strategy (if available) and business context, determine:
 - **Target Keywords**: What topics, problems, or questions does the audience discuss?
-- **Target Hashtags**: What LinkedIn hashtags are relevant? (e.g., #SaaS, #StartupLife, #ProductManagement)
+- **Target Hashtags**: Use hashtags from strategy.md if defined, otherwise identify relevant LinkedIn hashtags (e.g., #SaaS, #StartupLife, #ProductManagement)
 - **People/Companies to Follow**: Who are thought leaders and key companies in the space?
 - **Content Types**: Posts, articles, polls, carousels
+- **Engagement Rules**: Respect any constraints defined in the strategy (e.g., comment-first approach, tone requirements)
 
 ---
 
@@ -183,7 +240,8 @@ Prioritize posts that:
 ## Output
 
 After completing research, you should have:
-1. Business context saved in `BUSINESS.md`
-2. Search strategy documented
-3. Discovered posts saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings
-4. People to follow identified and logged
+1. LinkedIn engagement strategy saved in `strategy.md` (if user chose to create one)
+2. Business context saved in `BUSINESS.md`
+3. Search strategy documented
+4. Discovered posts saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings
+5. People to follow identified and logged

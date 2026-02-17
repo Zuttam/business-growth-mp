@@ -3,9 +3,10 @@
 ## Prerequisites
 
 Before engaging:
-1. Business context must exist at `.business_growth/marketing/social/BUSINESS.md`
-2. Posts should be discovered and saved to `.business_growth/marketing/social/linkedin/{YYYY-MM}/{YYYY-MM-DD}.md`
-3. User must be logged into LinkedIn in the browser (use login skill or log in manually)
+1. Load LinkedIn engagement strategy from `.business_growth/marketing/social/linkedin/strategy.md` — if it doesn't exist, ask the user: **"No LinkedIn engagement strategy found. Would you like to create one before engaging?"** If yes, follow the strategy creation flow in [references/research.md](./research.md) Step 0. If no, proceed without it.
+2. Business context must exist at `.business_growth/marketing/social/BUSINESS.md`
+3. Posts should be discovered and saved to `.business_growth/marketing/social/linkedin/{YYYY-MM}/{YYYY-MM-DD}.md`
+4. User must be logged into LinkedIn in the browser (use login skill or log in manually)
 
 ---
 

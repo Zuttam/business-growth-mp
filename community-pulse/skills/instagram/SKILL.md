@@ -22,6 +22,7 @@ This skill enables authentic Instagram engagement by discovering relevant posts 
 | File | Purpose |
 |------|---------|
 | `.business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
+| `.business_growth/marketing/social/instagram/strategy.md` | Instagram engagement strategy (overall approach, hashtag groups, content themes) |
 | `.business_growth/marketing/social/instagram/{YYYY-MM}/{YYYY-MM-DD}.md` | Daily posts, accounts, and engagement log |
 | `community-pulse/skills/instagram/.env.profiles.local` | Instagram credentials (gitignored) |
 
@@ -29,6 +30,7 @@ This skill enables authentic Instagram engagement by discovering relevant posts 
 
 1. **First time?** → Run **Login** to authenticate, then **Research** to find posts
 2. **Have posts?** → Run **Engage** to comment or follow
+3. **Before any Research or Engagement** → The strategy file at `.business_growth/marketing/social/instagram/strategy.md` is loaded automatically. If it doesn't exist, you'll be asked if you want to create one.
 
 ## Decision Flow
 

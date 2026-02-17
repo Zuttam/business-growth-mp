@@ -29,6 +29,7 @@ This skill enables authentic Hacker News engagement by discovering relevant disc
 | File | Purpose |
 |------|---------|
 | `.business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
+| `.business_growth/marketing/social/hackernews/strategy.md` | Hacker News engagement strategy (overall approach, topics, expertise areas) |
 | `.business_growth/marketing/social/hackernews/{YYYY-MM}/{YYYY-MM-DD}.md` | Daily threads and engagement log |
 | `community-pulse/skills/hackernews/.env.profiles.local` | HN credentials (gitignored) |
 
@@ -36,6 +37,7 @@ This skill enables authentic Hacker News engagement by discovering relevant disc
 
 1. **First time?** → Run **Login** to authenticate, then **Research** to find discussions
 2. **Have threads?** → Run **Engage** to comment or submit posts
+3. **Before any Research or Engagement** → The strategy file at `.business_growth/marketing/social/hackernews/strategy.md` is loaded automatically. If it doesn't exist, you'll be asked if you want to create one.
 
 ## Decision Flow
 

@@ -28,6 +28,7 @@ This skill enables authentic LinkedIn engagement by discovering relevant posts, 
 | File | Purpose |
 |------|---------|
 | `.business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
+| `.business_growth/marketing/social/linkedin/strategy.md` | LinkedIn engagement strategy (overall approach, target audiences, content pillars) |
 | `.business_growth/marketing/social/linkedin/{YYYY-MM}/{YYYY-MM-DD}.md` | Daily posts, people, and engagement log |
 | `community-pulse/skills/linkedin/.env.profiles.local` | LinkedIn credentials (gitignored) |
 
@@ -35,6 +36,7 @@ This skill enables authentic LinkedIn engagement by discovering relevant posts, 
 
 1. **First time?** → Run **Login** to authenticate, then **Research** to find posts and people
 2. **Have posts?** → Run **Engage** to comment or create new posts
+3. **Before any Research or Engagement** → The strategy file at `.business_growth/marketing/social/linkedin/strategy.md` is loaded automatically. If it doesn't exist, you'll be asked if you want to create one.
 
 ## Decision Flow
 

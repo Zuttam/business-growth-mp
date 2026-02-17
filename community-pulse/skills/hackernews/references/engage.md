@@ -3,9 +3,10 @@
 ## Prerequisites
 
 Before engaging:
-1. Business context must exist at `.business_growth/marketing/social/BUSINESS.md`
-2. Threads should be discovered and saved to `.business_growth/marketing/social/hackernews/{YYYY-MM}/{YYYY-MM-DD}.md`
-3. User must be logged into Hacker News in the browser (use login skill or log in manually)
+1. Load Hacker News engagement strategy from `.business_growth/marketing/social/hackernews/strategy.md` — if it doesn't exist, ask the user: **"No Hacker News engagement strategy found. Would you like to create one before engaging?"** If yes, follow the strategy creation flow in [references/research.md](./research.md) Step 0. If no, proceed without it.
+2. Business context must exist at `.business_growth/marketing/social/BUSINESS.md`
+3. Threads should be discovered and saved to `.business_growth/marketing/social/hackernews/{YYYY-MM}/{YYYY-MM-DD}.md`
+4. User must be logged into Hacker News in the browser (use login skill or log in manually)
 
 ---
 

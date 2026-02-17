@@ -28,6 +28,7 @@ This skill enables authentic X engagement by discovering relevant tweets and thr
 | File | Purpose |
 |------|---------|
 | `.business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
+| `.business_growth/marketing/social/x/strategy.md` | X engagement strategy (overall approach, accounts to monitor, content themes) |
 | `.business_growth/marketing/social/x/{YYYY-MM}/{YYYY-MM-DD}.md` | Daily tweets, people, and engagement log |
 | `community-pulse/skills/x/.env.profiles.local` | X credentials (gitignored) |
 
@@ -35,6 +36,7 @@ This skill enables authentic X engagement by discovering relevant tweets and thr
 
 1. **First time?** → Run **Login** to authenticate, then **Research** to find tweets and people
 2. **Have tweets?** → Run **Engage** to reply, post, or quote tweet
+3. **Before any Research or Engagement** → The strategy file at `.business_growth/marketing/social/x/strategy.md` is loaded automatically. If it doesn't exist, you'll be asked if you want to create one.
 
 ## Decision Flow
 

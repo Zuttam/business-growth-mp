@@ -3,22 +3,79 @@
 ## Prerequisites
 
 Before starting research:
-1. Load business context from `.business_growth/marketing/social/BUSINESS.md`
-2. If missing, create it first (see Step 1 below)
+1. Load Instagram engagement strategy from `.business_growth/marketing/social/instagram/strategy.md`
+2. Load business context from `.business_growth/marketing/social/BUSINESS.md`
+3. If either is missing, create them first (see steps below)
 
 ---
 
-## Step 0: Load Business Context
+## Step 0: Load Instagram Engagement Strategy
+
+```
+Read .business_growth/marketing/social/instagram/strategy.md
+```
+
+If file doesn't exist, ask the user: **"No Instagram engagement strategy found. Would you like to create one? This defines your overall approach to Instagram — hashtag groups, target accounts, content themes, and goals."**
+
+If user says **yes**, gather the following and create the file:
+- **Goal**: What do you want to achieve on Instagram? (brand awareness, community building, traffic, influencer relationships)
+- **Target Accounts**: Who are key accounts, influencers, and competitors to engage with?
+- **Hashtag Groups**: What hashtag clusters are relevant? (niche hashtags, industry hashtags, community hashtags)
+- **Content Themes**: What topics/expertise should comments focus on?
+- **Engagement Rules**: Any constraints? (e.g., max comments per day, avoid competitor posts, comment-before-follow strategy)
+- **Tone & Voice**: How should comments sound? (friendly peer, helpful expert, enthusiastic supporter)
+- **Metrics to Track**: What signals success? (followers, comment replies, profile visits, engagement rate)
+
+Create `.business_growth/marketing/social/instagram/strategy.md` with format:
+
+```markdown
+# Instagram Engagement Strategy
+
+## Goal
+<what we want to achieve on Instagram>
+
+## Target Accounts
+| Account | Why | Followers | Niche |
+|---------|-----|-----------|-------|
+| @example | <reason> | <count> | <niche> |
+
+## Hashtag Groups
+- **Niche**: <hashtags specific to your industry>
+- **Community**: <hashtags your audience uses>
+- **Discovery**: <broader hashtags for reach>
+
+## Content Themes
+- <theme 1>: <description>
+- <theme 2>: <description>
+
+## Engagement Rules
+- <rule 1>
+- <rule 2>
+
+## Tone & Voice
+<description of how comments should sound>
+
+## Metrics & Goals
+- <metric>: <target>
+
+## Last Updated: <timestamp>
+```
+
+If user says **no**, proceed without a strategy (use business context alone).
+
+---
+
+## Step 1: Load Business Context
 
 ```
 Read .business_growth/marketing/social/BUSINESS.md
 ```
 
-If file doesn't exist, proceed to Step 1. Otherwise, skip to Step 2.
+If file doesn't exist, proceed to Step 1b. Otherwise, skip to Step 2.
 
 ---
 
-## Step 1: Create Business Context (if missing)
+## Step 1b: Create Business Context (if missing)
 
 Ask user for:
 - Product/service description
@@ -58,11 +115,12 @@ Create `.business_growth/marketing/social/BUSINESS.md` with format:
 
 ## Step 2: Generate Instagram Search Strategy
 
-Based on business context, determine:
-- **Target Hashtags**: What hashtags does the audience use? (e.g., #startup, #saas, #buildinpublic, #growthhacking, #entrepreneurlife)
-- **Target Accounts**: Who are competitors, influencers, and thought leaders on Instagram?
+Based on the engagement strategy (if available) and business context, determine:
+- **Target Hashtags**: Use hashtag groups from strategy.md if defined, otherwise identify what hashtags the audience uses (e.g., #startup, #saas, #buildinpublic, #growthhacking, #entrepreneurlife)
+- **Target Accounts**: Use accounts from strategy.md if defined, otherwise identify competitors, influencers, and thought leaders on Instagram
 - **Search Keywords**: What topics does the audience discuss in captions and comments?
 - **Content Types to Monitor**: Image posts, carousel posts, Reels
+- **Engagement Rules**: Respect any constraints defined in the strategy (e.g., max comments per day, tone requirements)
 
 ---
 
@@ -197,7 +255,8 @@ Prioritize posts that:
 ## Output
 
 After completing research, you should have:
-1. Business context saved in `BUSINESS.md`
-2. Search strategy documented
-3. Discovered posts saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings
-4. Accounts to follow identified and logged
+1. Instagram engagement strategy saved in `strategy.md` (if user chose to create one)
+2. Business context saved in `BUSINESS.md`
+3. Search strategy documented
+4. Discovered posts saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings
+5. Accounts to follow identified and logged

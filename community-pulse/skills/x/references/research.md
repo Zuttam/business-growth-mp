@@ -3,22 +3,78 @@
 ## Prerequisites
 
 Before starting research:
-1. Load business context from `.business_growth/marketing/social/BUSINESS.md`
-2. If missing, create it first (see Step 1 below)
+1. Load X engagement strategy from `.business_growth/marketing/social/x/strategy.md`
+2. Load business context from `.business_growth/marketing/social/BUSINESS.md`
+3. If either is missing, create them first (see steps below)
 
 ---
 
-## Step 0: Load Business Context
+## Step 0: Load X Engagement Strategy
+
+```
+Read .business_growth/marketing/social/x/strategy.md
+```
+
+If file doesn't exist, ask the user: **"No X engagement strategy found. Would you like to create one? This defines your overall approach to X — accounts to engage with, content themes, hashtag strategy, and goals."**
+
+If user says **yes**, gather the following and create the file:
+- **Goal**: What do you want to achieve on X? (thought leadership, community building, traffic, brand awareness)
+- **Accounts to Monitor**: Who are key voices, competitors, and thought leaders to engage with?
+- **Content Themes**: What topics/expertise should tweets and replies focus on?
+- **Engagement Rules**: Any constraints? (e.g., reply-first strategy, max tweets per day, avoid controversial topics)
+- **Tone & Voice**: How should tweets/replies sound? (witty expert, helpful peer, data-driven analyst)
+- **Hashtag Strategy**: Key hashtags to use (1-2 per tweet max on X)
+- **Metrics to Track**: What signals success? (impressions, replies, followers, profile visits)
+
+Create `.business_growth/marketing/social/x/strategy.md` with format:
+
+```markdown
+# X Engagement Strategy
+
+## Goal
+<what we want to achieve on X>
+
+## Accounts to Monitor
+| Account | Why | Audience |
+|---------|-----|----------|
+| @example | <reason> | <who follows them> |
+
+## Content Themes
+- <theme 1>: <description>
+- <theme 2>: <description>
+
+## Engagement Rules
+- <rule 1>
+- <rule 2>
+
+## Tone & Voice
+<description of how tweets/replies should sound>
+
+## Hashtag Strategy
+- Primary: <hashtags to use>
+- Monitor: <hashtags to watch>
+
+## Metrics & Goals
+- <metric>: <target>
+
+## Last Updated: <timestamp>
+```
+
+If user says **no**, proceed without a strategy (use business context alone).
+
+---
+
+## Step 1: Load Business Context
 
 ```
 Read .business_growth/marketing/social/BUSINESS.md
 ```
 
-If file doesn't exist, proceed to Step 1. Otherwise, skip to Step 2.
+If file doesn't exist, proceed to Step 1b. Otherwise, skip to Step 2.
 
 ---
 
-## Step 1: Create Business Context (if missing)
+## Step 1b: Create Business Context (if missing)
 
 Ask user for:
 - Product/service description
@@ -58,11 +114,12 @@ Create `.business_growth/marketing/social/BUSINESS.md` with format:
 
 ## Step 2: Generate X Search Strategy
 
-Based on business context, determine:
+Based on the engagement strategy (if available) and business context, determine:
 - **Search Keywords**: What topics, problems, or questions does the audience tweet about?
-- **Target Hashtags**: What hashtags are relevant? (e.g., #buildinpublic, #indiehackers, #SaaS)
-- **Accounts to Monitor**: Who are thought leaders, competitors, and key voices in the space?
+- **Target Hashtags**: Use hashtags from strategy.md if defined, otherwise identify relevant hashtags (e.g., #buildinpublic, #indiehackers, #SaaS)
+- **Accounts to Monitor**: Use accounts from strategy.md if defined, otherwise identify thought leaders, competitors, and key voices in the space
 - **Content Types**: Tweets, threads, polls, spaces
+- **Engagement Rules**: Respect any constraints defined in the strategy (e.g., max tweets per day, tone requirements)
 
 ---
 
@@ -186,7 +243,8 @@ Prioritize tweets that:
 ## Output
 
 After completing research, you should have:
-1. Business context saved in `BUSINESS.md`
-2. Search strategy documented
-3. Discovered tweets saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings
-4. People to follow identified and logged
+1. X engagement strategy saved in `strategy.md` (if user chose to create one)
+2. Business context saved in `BUSINESS.md`
+3. Search strategy documented
+4. Discovered tweets saved to `{YYYY-MM}/{YYYY-MM-DD}.md` with priority rankings
+5. People to follow identified and logged

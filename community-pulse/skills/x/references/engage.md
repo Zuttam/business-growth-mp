@@ -3,9 +3,10 @@
 ## Prerequisites
 
 Before engaging:
-1. Business context must exist at `.business_growth/marketing/social/BUSINESS.md`
-2. Tweets should be discovered and saved to `.business_growth/marketing/social/x/{YYYY-MM}/{YYYY-MM-DD}.md`
-3. User must be logged into X in the browser (use login skill or log in manually)
+1. Load X engagement strategy from `.business_growth/marketing/social/x/strategy.md` — if it doesn't exist, ask the user: **"No X engagement strategy found. Would you like to create one before engaging?"** If yes, follow the strategy creation flow in [references/research.md](./research.md) Step 0. If no, proceed without it.
+2. Business context must exist at `.business_growth/marketing/social/BUSINESS.md`
+3. Tweets should be discovered and saved to `.business_growth/marketing/social/x/{YYYY-MM}/{YYYY-MM-DD}.md`
+4. User must be logged into X in the browser (use login skill or log in manually)
 
 ---
 

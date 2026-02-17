@@ -22,6 +22,7 @@ This skill enables authentic Reddit engagement by discovering relevant threads, 
 | File | Purpose |
 |------|---------|
 | `.business_growth/marketing/social/BUSINESS.md` | Shared business context (required) |
+| `.business_growth/marketing/social/reddit/strategy.md` | Reddit engagement strategy (overall approach, target subreddits, engagement rules) |
 | `.business_growth/marketing/social/reddit/{YYYY-MM}/{YYYY-MM-DD}.md` | Daily threads and engagement log |
 | `community-pulse/skills/reddit/.env.profiles.local` | Reddit credentials (gitignored) |
 
@@ -29,6 +30,7 @@ This skill enables authentic Reddit engagement by discovering relevant threads, 
 
 1. **First time?** → Run **Login** to authenticate, then **Research** to find threads
 2. **Have threads?** → Run **Engage** to comment or post
+3. **Before any Research or Engagement** → The strategy file at `.business_growth/marketing/social/reddit/strategy.md` is loaded automatically. If it doesn't exist, you'll be asked if you want to create one.
 
 ## Decision Flow
 
