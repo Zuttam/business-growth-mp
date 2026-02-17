@@ -52,7 +52,9 @@ Then reference in your Claude Code configuration.
 
 ## Prerequisites
 
-- **Browser MCP** - A browser automation MCP is required for web interactions (LinkedIn, Reddit, etc.). Supported options include:
+> **Important:** Most skills and agents in this repository require a browser automation MCP to be installed and running, as they interact with web platforms (LinkedIn, Reddit, X, Hacker News, etc.) on your behalf.
+
+- **Browser MCP** (Required) - Supported options include:
   - [Claude in Chrome Extension](https://chromewebstore.google.com/detail/claude-in-chrome) (Recommended)
   - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
   - Any other browser automation MCP
