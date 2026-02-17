@@ -3,5 +3,5 @@
   "version": "0.1.0",
   "description": "Social media marketing agent for community engagement across platforms (Reddit, Hacker News, LinkedIn, X, etc.)",
   "author": { "name": "Matan Zutta" },
-  "keywords": ["marketing", "social", "engagement", "community", "reddit", "hackernews", "hn", "linkedin", "x", "twitter"]
+  "keywords": ["marketing", "social", "engagement", "community", "reddit", "hackernews", "hn", "linkedin", "x", "twitter", "instagram"]
 }

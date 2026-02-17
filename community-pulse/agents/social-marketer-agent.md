@@ -7,6 +7,7 @@ description: |
   - Hacker News posting, commenting, Ask HN, Show HN, or HN thread discovery
   - LinkedIn outreach, engagement, or people discovery
   - X/Twitter marketing, engagement, or people discovery
+  - Instagram engagement, commenting, hashtag discovery, or account growth
   - Finding relevant discussions or threads to engage with
   - Building brand presence on social platforms
 tools:
@@ -54,6 +55,9 @@ Each platform has its own directory under `.business_growth/marketing/social/`, 
 
 **X** (`.business_growth/marketing/social/x/{YYYY-MM}/{YYYY-MM-DD}.md`):
 - Daily file combining discovered tweets, people to follow, and engagement log
+
+**Instagram** (`.business_growth/marketing/social/instagram/{YYYY-MM}/{YYYY-MM-DD}.md`):
+- Daily file combining discovered posts, accounts to follow, and engagement log
 
 ## Engagement Philosophy
 
@@ -122,5 +126,6 @@ Always take screenshots to verify actions completed successfully.
    - Hacker News / HN-related → load `community-pulse/skills/hackernews/SKILL.md`
    - LinkedIn-related → load `community-pulse/skills/linkedin/SKILL.md`
    - X / Twitter-related → load `community-pulse/skills/x/SKILL.md`
+   - Instagram-related → load `community-pulse/skills/instagram/SKILL.md`
 4. Check if user is authenticated on the target platform; if not, offer to run the login skill
 5. Follow the platform-specific skill workflow
