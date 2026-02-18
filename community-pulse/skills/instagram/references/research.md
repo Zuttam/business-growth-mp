@@ -23,8 +23,28 @@ If user says **yes**, gather the following and create the file:
 - **Hashtag Groups**: What hashtag clusters are relevant? (niche hashtags, industry hashtags, community hashtags)
 - **Content Themes**: What topics/expertise should comments focus on?
 - **Engagement Rules**: Any constraints? (e.g., max comments per day, avoid competitor posts, comment-before-follow strategy)
-- **Tone & Voice**: How should comments sound? (friendly peer, helpful expert, enthusiastic supporter)
+- **Writing Style & Voice** (MANDATORY): The user's personal writing style — must be captured accurately (see Style Discovery below)
 - **Metrics to Track**: What signals success? (followers, comment replies, profile visits, engagement rate)
+
+### Style Discovery (Mandatory)
+
+Before creating the strategy file, learn the user's authentic writing voice:
+
+1. **Check for existing content**: Look for past engagement logs in `.business_growth/marketing/social/instagram/` and other platform directories (`.business_growth/marketing/social/*/`) — read any previous comments/posts the user has approved and posted
+2. **If existing content found**: Analyze the writing patterns and present a style characterization to the user covering:
+   - Sentence structure (short/punchy vs. long/detailed vs. conversational)
+   - Vocabulary level (casual, technical, formal, mixed)
+   - Common patterns (asks questions, uses analogies, leads with data, uses humor, tells stories)
+   - Distinctive phrases, expressions, or quirks
+
+   **Ask the user**: *"Based on your past posts, here's how I'd describe your writing style: [characterization]. Does this capture your voice accurately? Any adjustments?"*
+
+3. **If no existing content found**: Ask the user to either:
+   - Provide 2-3 example comments/posts they've written (on any platform)
+   - Describe their writing style in their own words
+   - Point to a social profile where their writing can be reviewed via browser
+
+**Wait for explicit user approval of the style characterization before saving the strategy.**
 
 Create `.business_growth/marketing/social/instagram/strategy.md` with format:
 
@@ -52,8 +72,15 @@ Create `.business_growth/marketing/social/instagram/strategy.md` with format:
 - <rule 1>
 - <rule 2>
 
-## Tone & Voice
-<description of how comments should sound>
+## Writing Style & Voice
+- **Tone**: <e.g., friendly peer, helpful expert, enthusiastic supporter>
+- **Sentence Style**: <e.g., short and punchy, detailed and thorough, conversational>
+- **Vocabulary**: <e.g., casual, technical, formal, mixed>
+- **Patterns**: <e.g., leads with questions, uses analogies, data-driven, uses humor>
+- **Distinctive Traits**: <specific phrases, expressions, or quirks the user uses>
+- **Avoid**: <what does NOT sound like the user>
+
+> Style approved by user: yes
 
 ## Metrics & Goals
 - <metric>: <target>

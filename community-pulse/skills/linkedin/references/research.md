@@ -22,9 +22,29 @@ If user says **yes**, gather the following and create the file:
 - **Target Audiences**: Who do you want to reach? (job titles, industries, company sizes)
 - **Content Pillars**: What topics/expertise should posts and comments focus on?
 - **Engagement Rules**: Any constraints? (e.g., comment-first strategy, max posts per week, avoid competitors' posts)
-- **Tone & Voice**: How should comments/posts sound? (authoritative expert, collaborative peer, industry insider)
+- **Writing Style & Voice** (MANDATORY): The user's personal writing style — must be captured accurately (see Style Discovery below)
 - **Hashtag Strategy**: Key hashtags to use and monitor
 - **Metrics to Track**: What signals success? (impressions, comments, connection requests, profile views)
+
+### Style Discovery (Mandatory)
+
+Before creating the strategy file, learn the user's authentic writing voice:
+
+1. **Check for existing content**: Look for past engagement logs in `.business_growth/marketing/social/linkedin/` and other platform directories (`.business_growth/marketing/social/*/`) — read any previous comments/posts the user has approved and posted
+2. **If existing content found**: Analyze the writing patterns and present a style characterization to the user covering:
+   - Sentence structure (short/punchy vs. long/detailed vs. conversational)
+   - Vocabulary level (casual, technical, formal, mixed)
+   - Common patterns (asks questions, uses analogies, leads with data, uses humor, tells stories)
+   - Distinctive phrases, expressions, or quirks
+
+   **Ask the user**: *"Based on your past posts, here's how I'd describe your writing style: [characterization]. Does this capture your voice accurately? Any adjustments?"*
+
+3. **If no existing content found**: Ask the user to either:
+   - Provide 2-3 example comments/posts they've written (on any platform)
+   - Describe their writing style in their own words
+   - Point to a social profile where their writing can be reviewed via browser
+
+**Wait for explicit user approval of the style characterization before saving the strategy.**
 
 Create `.business_growth/marketing/social/linkedin/strategy.md` with format:
 
@@ -47,8 +67,15 @@ Create `.business_growth/marketing/social/linkedin/strategy.md` with format:
 - <rule 1>
 - <rule 2>
 
-## Tone & Voice
-<description of how comments/posts should sound>
+## Writing Style & Voice
+- **Tone**: <e.g., authoritative expert, collaborative peer, industry insider>
+- **Sentence Style**: <e.g., short and punchy, detailed and thorough, conversational>
+- **Vocabulary**: <e.g., casual, technical, formal, mixed>
+- **Patterns**: <e.g., leads with questions, uses analogies, data-driven, uses humor>
+- **Distinctive Traits**: <specific phrases, expressions, or quirks the user uses>
+- **Avoid**: <what does NOT sound like the user>
+
+> Style approved by user: yes
 
 ## Hashtag Strategy
 - Primary: <hashtags to use regularly>
