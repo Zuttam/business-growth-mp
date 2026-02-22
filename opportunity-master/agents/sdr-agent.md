@@ -30,10 +30,8 @@ Help users define and refine their ICP by identifying:
 Search LinkedIn to build targeted prospect lists:
 - Use LinkedIn Sales Navigator or standard search
 - Extract lead data: name, title, company, LinkedIn URL, location, headline
-- Save leads to `.business_growth/sales/lead_lists/list_<name>/LIST.md`
-- Document ICP criteria used in `.business_growth/sales/lead_lists/list_<name>/icp.md`
-
-**Naming Convention**: Use meaningful snake_case names based on ICP criteria (e.g., `list_sf_series_b_vp_engineering`, `list_fintech_cto_ny`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
+- Save leads to `.business_growth/sales/campaigns/<campaign_id>/LIST.md`
+- Document ICP criteria used in `.business_growth/sales/campaigns/<campaign_id>/icp.md`
 
 ### 3. Campaign Creation
 Design multi-touch outreach sequences:
@@ -66,22 +64,39 @@ All data is stored in the `.business_growth/sales/` directory:
 
 ```
 .business_growth/sales/
-├── lead_lists/
-│   └── list_<name>/                    # e.g., list_sf_series_b_vp_engineering
-│       ├── LIST.md                     # Lead data
-│       └── icp.md                      # ICP definition
+├── DECISIONS.md                         # Global defaults
 ├── campaigns/
-│   └── campaign_<name>/                # e.g., campaign_q1_outreach_fintech
-│       ├── CAMPAIGN.md                 # Campaign definition
+│   └── campaign_<name>/                 # e.g., campaign_fintech_vp_eng
+│       ├── icp.md                       # ICP definition
+│       ├── LIST.md                      # Lead list
+│       ├── CAMPAIGN.md                  # Outreach strategy + sequence
 │       └── leads/
-│           └── <lead_name>/            # e.g., john_smith_acme
-│               ├── execution.md        # Execution log
-│               └── research.md         # Lead research
-├── opportunities/                      # Managed by AE agent
-└── templates/                          # Reusable templates
+│           └── <lead_name>/             # e.g., john_smith_acme
+│               ├── execution.md         # Execution log
+│               └── research.md          # Lead research
+├── opportunities/                       # Managed by AE agent
+└── templates/                           # Reusable templates
 ```
 
 **Naming Guidelines**: All names use snake_case (lowercase with underscores), include key identifying info (company, target audience, purpose), and are kept concise (3-5 words max).
+
+## Campaign Orchestration Flow
+
+The campaign is the single organizing entity. All skills operate within a campaign context:
+
+```
+Create Campaign → Define ICP → Build List → [Research] → Create Outreach → Execute
+                   (icp.md)     (LIST.md)   (research.md)  (CAMPAIGN.md)   (execution.md)
+```
+
+Each step checks prerequisites exist before proceeding:
+- **Define ICP**: Creates `icp.md` in the campaign folder
+- **Build List**: Requires `icp.md`, creates `LIST.md`
+- **Research** (optional): Requires `LIST.md`, creates `leads/<name>/research.md`
+- **Create Outreach**: Requires `LIST.md` and `icp.md`, creates `CAMPAIGN.md`
+- **Execute**: Requires `CAMPAIGN.md` and `LIST.md`, creates `leads/<name>/execution.md`
+
+Individual skills can still run standalone — they resolve their own campaign context by asking the user to create or select a campaign.
 
 ## LinkedIn Rate Limits
 

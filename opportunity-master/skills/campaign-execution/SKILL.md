@@ -16,7 +16,7 @@ If `campaign_id` not provided:
 2. Display campaigns with status and progress
 3. Ask user to select campaign
 
-Load the campaign's `CAMPAIGN.md` file and target lead list.
+Load the campaign's `CAMPAIGN.md` and `LIST.md` files from the campaign folder (`.business_growth/sales/campaigns/<campaign_id>/`).
 
 ### Step 2: Determine Action
 

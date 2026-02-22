@@ -38,12 +38,20 @@ If `linkedin_url` provided:
 - Use directly for research
 
 If `lead_name` provided:
-- Search in lead lists under `.business_growth/sales/lead_lists/`
+- Search in campaigns under `.business_growth/sales/campaigns/`
 - Find matching lead and get LinkedIn URL
 
+If `campaign_id` provided (without specific lead):
+- Load `LIST.md` from `.business_growth/sales/campaigns/<campaign_id>/`
+- Ask user which lead to research, or research all leads
+
 If neither provided:
-- Ask user for LinkedIn URL or lead name
-- Or offer to research leads from a specific campaign/list
+1. Check for existing campaigns in `.business_growth/sales/campaigns/`
+2. If campaigns exist, ask user:
+   - **(A) Create new campaign** → Generate a meaningful snake_case name
+   - **(B) Add to existing campaign** → Select from available campaigns
+3. Establish `campaign_id` before proceeding
+4. Ask user for LinkedIn URL or lead name to research
 
 ### Step 2: Navigate to LinkedIn Profile
 
@@ -142,9 +150,8 @@ Create 3-5 personalized ice breakers based on research:
 
 ### Step 7: Save Research
 
-Determine save location:
-- If `campaign_id` provided: `.business_growth/sales/campaigns/campaign_<name>/leads/<lead_name>/research.md`
-- Otherwise: `.business_growth/sales/lead_research/<lead_name>/research.md`
+Save to the campaign folder:
+`.business_growth/sales/campaigns/<campaign_id>/leads/<lead_name>/research.md`
 
 **Lead Naming**: Generate meaningful snake_case names for leads based on their name and company (e.g., `john_smith_acme`, `sarah_jones_techcorp`). Keep names concise, lowercase with underscores, no special characters.
 

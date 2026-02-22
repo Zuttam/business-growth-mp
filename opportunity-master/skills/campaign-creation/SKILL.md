@@ -1,6 +1,6 @@
 ---
 name: campaign-creation
-description: Create LinkedIn outreach campaigns with personalized messaging sequences. Use when user wants to create a campaign, design outreach, write messaging sequences, or set up automated follow-ups. Can be invoked with optional list_id argument (e.g., list_abc123).
+description: Create LinkedIn outreach campaigns with personalized messaging sequences. Use when user wants to create a campaign, design outreach, write messaging sequences, or set up automated follow-ups. Can be invoked with optional campaign_id argument (e.g., campaign_fintech_q1).
 ---
 
 # Campaign Creation Skill
@@ -23,14 +23,20 @@ Ask: "Want to use your saved buyer profile for messaging, or customize for this 
 - **(A) Use defaults** → Pre-fill value proposition, skip those questions
 - **(B) Customize** → Ask campaign-specific messaging questions
 
-### Step 1: Select Target Lead List
+### Step 1: Resolve Campaign Context
 
-If `list_id` not provided:
-1. Search for existing lead lists in `.business_growth/sales/lead_lists/`
-2. Display available lists with metadata
-3. Ask user to select target list
+If `campaign_id` provided:
+- Verify the campaign folder exists at `.business_growth/sales/campaigns/<campaign_id>/`
+- Load `LIST.md` and `icp.md` from the campaign folder
 
-Verify the list exists and load its contents.
+If `campaign_id` not provided:
+1. Check for existing campaigns in `.business_growth/sales/campaigns/`
+2. If campaigns exist, ask user:
+   - **(A) Create new campaign** → Generate a meaningful snake_case name (e.g., `campaign_fintech_vp_eng`)
+   - **(B) Add to existing campaign** → Select from available campaigns
+3. If no campaigns exist, create a new one
+
+Establish `campaign_id` before proceeding. Load the campaign's `LIST.md` and `icp.md` if they exist.
 
 ### Step 2: Define Campaign Strategy
 
@@ -92,17 +98,16 @@ I've been helping similar teams [value prop]. Would love to connect and share so
 
 ### Step 5: Save Campaign
 
-Generate a meaningful snake_case name based on campaign purpose and target audience (e.g., `campaign_q1_outreach_fintech`, `campaign_product_launch_series_a`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
+Save to the campaign folder established in Step 1.
 
-Create `.business_growth/sales/campaigns/campaign_<name>/CAMPAIGN.md`:
+Create `.business_growth/sales/campaigns/<campaign_id>/CAMPAIGN.md`:
 
 ```markdown
 # Campaign: <Campaign Name>
 
 ## Metadata
-- **Campaign ID**: campaign_<name>   # e.g., campaign_q1_outreach_fintech
+- **Campaign ID**: <campaign_id>   # e.g., campaign_fintech_vp_eng
 - **Status**: pending
-- **Target List**: <list_id>
 - **Created**: <ISO timestamp>
 - **Last Updated**: <ISO timestamp>
 
@@ -181,10 +186,10 @@ Summarize the campaign:
 - Sequence length and timing
 - Key messaging themes
 
-Suggest next steps:
+Suggest next steps (pass `campaign_id` to each):
 1. Review and edit templates as needed
-2. Use `/opportunity-master:lead-research` to personalize for top prospects
-3. Use `/opportunity-master:campaign-execution` to start outreach
+2. Use `/opportunity-master:lead-research <campaign_id>` to personalize for top prospects
+3. Use `/opportunity-master:campaign-execution <campaign_id>` to start outreach
 
 ## Template Best Practices
 

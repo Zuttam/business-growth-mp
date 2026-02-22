@@ -1,6 +1,6 @@
 ---
 name: list-building
-description: Build targeted lists of potential buyers from LinkedIn based on ICP criteria. Use when user wants to find prospects, build buyer lists, search LinkedIn for customers, or define their ideal buyer profile. Not for competitor research. Can be invoked with optional criteria (e.g., "VP Engineering at Series B SaaS companies in SF").
+description: Build targeted lists of potential buyers from LinkedIn based on ICP criteria. Use when user wants to find prospects, build buyer lists, search LinkedIn for customers, or define their ideal buyer profile. Not for competitor research. Can be invoked with optional campaign_id and/or criteria (e.g., "campaign_fintech_q1 VP Engineering at Series B SaaS companies in SF").
 ---
 
 # List Building Skill
@@ -31,10 +31,24 @@ Go through the full discovery process and offer to save answers as defaults at t
 
 ---
 
-### Step 0b: Full Discovery (if not using defaults)
+### Step 0b: Resolve Campaign Context
+
+If `campaign_id` provided:
+- Use it directly as the campaign context
+
+If `campaign_id` not provided:
+1. Check for existing campaigns in `.business_growth/sales/campaigns/`
+2. If campaigns exist, ask user:
+   - **(A) Create new campaign** → Generate a meaningful snake_case name based on criteria (e.g., `campaign_fintech_vp_eng`)
+   - **(B) Add to existing campaign** → Select from available campaigns
+3. If no campaigns exist, create a new one
+
+Establish `campaign_id` before proceeding.
+
+### Step 0c: Full Discovery (if not using defaults)
 
 **Gather context:**
-- Check existing lists in `.business_growth/sales/lead_lists/` to understand prior work
+- Check existing campaigns in `.business_growth/sales/campaigns/` to understand prior work
 - Review any existing ICP definitions or campaign history
 
 **Ask clarifying questions (one at a time):**
@@ -78,9 +92,7 @@ Once you understand the user's goals from Step 0, nail down the specific buyer c
 
 ### Step 2: Create ICP Document
 
-Generate a meaningful snake_case name based on the ICP criteria (e.g., `list_sf_series_b_vp_engineering`). Keep names concise (3-5 words max), lowercase with underscores, no special characters.
-
-Save ICP definition to `.business_growth/sales/lead_lists/list_<name>/icp.md`:
+Save ICP definition to `.business_growth/sales/campaigns/<campaign_id>/icp.md`:
 
 ```markdown
 # ICP Definition
@@ -143,13 +155,13 @@ Use `read_page` to extract structured data from search results or profiles.
 
 ### Step 5: Save Lead List
 
-Create `.business_growth/sales/lead_lists/list_<name>/LIST.md`:
+Create `.business_growth/sales/campaigns/<campaign_id>/LIST.md`:
 
 ```markdown
 # Lead List: <Descriptive Name>
 
 ## Metadata
-- **List ID**: list_<name>   # e.g., list_sf_series_b_vp_engineering
+- **Campaign**: <campaign_id>   # e.g., campaign_fintech_vp_eng
 - **Created**: <ISO timestamp>
 - **Source**: LinkedIn Search
 - **ICP**: See icp.md
@@ -202,9 +214,9 @@ Provide summary to user:
 
 ## Next Steps After List Building
 
-Suggest to user:
-1. Use `/opportunity-master:lead-research` to research top prospects
-2. Use `/opportunity-master:campaign-creation` to create outreach campaign
+Suggest to user (pass `campaign_id` to each):
+1. Use `/opportunity-master:lead-research <campaign_id>` to research top prospects
+2. Use `/opportunity-master:campaign-creation <campaign_id>` to create outreach campaign
 3. Review and prioritize list before outreach
 
 ## Global Decisions File

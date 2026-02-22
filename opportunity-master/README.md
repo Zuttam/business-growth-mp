@@ -46,25 +46,24 @@ claude --plugin-dir /path/to/plugin-marketplace/opportunity-master
 ## Data Storage
 
 All data is stored in the `.business_growth/sales/` directory of your project. Directories are automatically created when the relevant agent starts:
-- SDR Agent creates: `lead_lists/`, `campaigns/`, `templates/`
+- SDR Agent creates: `campaigns/`, `templates/`
 - Account Executive Agent creates: `opportunities/`
 
 ```
 .business_growth/sales/
-├── lead_lists/           # Prospect lists from LinkedIn
-│   └── list_<name>/                  # e.g., list_sf_series_b_vp_engineering
-│       ├── LIST.md                   # Lead data
-│       └── icp.md                    # ICP definition
-├── campaigns/            # Outreach campaigns
-│   └── campaign_<name>/              # e.g., campaign_q1_outreach_fintech
-│       ├── CAMPAIGN.md               # Campaign definition
+├── DECISIONS.md                       # Global defaults
+├── campaigns/                         # Campaigns (ICP, leads, outreach, execution)
+│   └── campaign_<name>/               # e.g., campaign_fintech_vp_eng
+│       ├── icp.md                     # ICP definition
+│       ├── LIST.md                    # Lead list
+│       ├── CAMPAIGN.md                # Outreach strategy + sequence
 │       └── leads/
-│           └── <lead_name>/          # e.g., john_smith_acme
-│               ├── execution.md      # Action log
-│               └── research.md       # Lead research
-├── opportunities/        # Sales opportunities (AE agent)
-│   └── opp_<name>.md                 # e.g., opp_acme_corp_enterprise_deal
-└── templates/            # Reusable message templates
+│           └── <lead_name>/           # e.g., john_smith_acme
+│               ├── execution.md       # Action log
+│               └── research.md        # Lead research
+├── opportunities/                     # Sales opportunities (AE agent)
+│   └── opp_<name>.md                  # e.g., opp_acme_corp_enterprise_deal
+└── templates/                         # Reusable message templates
 ```
 
 **Naming Convention**: All entity names use snake_case (lowercase with underscores), include key identifying info, and are kept concise (3-5 words max).
@@ -74,25 +73,25 @@ All data is stored in the `.business_growth/sales/` directory of your project. D
 ### Build a Lead List
 
 ```
-/opportunity-master:list-building VP Engineering at Series B SaaS companies in San Francisco
+/opportunity-master:list-building campaign_fintech_vp_eng VP Engineering at Series B SaaS companies in San Francisco
 ```
 
 ### Create an Outreach Campaign
 
 ```
-/opportunity-master:campaign-creation list_sf_series_b_vp_engineering
+/opportunity-master:campaign-creation campaign_fintech_vp_eng
 ```
 
 ### Execute Campaign Actions
 
 ```
-/opportunity-master:campaign-execution campaign_q1_outreach_fintech run
+/opportunity-master:campaign-execution campaign_fintech_vp_eng run
 ```
 
 ### Research a Prospect
 
 ```
-/opportunity-master:lead-research https://linkedin.com/in/johndoe
+/opportunity-master:lead-research campaign_fintech_vp_eng https://linkedin.com/in/johndoe
 ```
 
 ## LinkedIn Rate Limits
@@ -109,11 +108,11 @@ Campaign execution uses a manual check-in approach - you invoke the skill period
 
 ## Workflow Example
 
-1. **Define ICP** → Use list-building to define your ideal customer profile
-2. **Build List** → Search LinkedIn and save prospects
-3. **Research Top Leads** → Use lead-research for personalization
-4. **Create Campaign** → Design messaging sequence
-5. **Execute** → Run campaign with periodic check-ins
+1. **Create Campaign** → Start by naming your campaign (e.g., `campaign_fintech_vp_eng`)
+2. **Define ICP & Build List** → Use list-building to define ICP and find prospects (saves `icp.md` + `LIST.md` to campaign folder)
+3. **Research Top Leads** → Use lead-research to personalize outreach (saves `research.md` per lead)
+4. **Create Outreach** → Design messaging sequence (saves `CAMPAIGN.md` to campaign folder)
+5. **Execute** → Run campaign with periodic check-ins (creates `execution.md` per lead)
 6. **Convert** → When leads respond, AE agent helps with pipeline
 
 ## Version History
