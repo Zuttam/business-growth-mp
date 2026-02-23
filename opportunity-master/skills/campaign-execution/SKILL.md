@@ -126,9 +126,10 @@ Update `execution.md`:
 
 #### 4e. Handle Special Cases
 
-**Connection Accepted**:
-- Update execution status to reflect acceptance
-- Calculate next action time for welcome message
+**Connection Accepted** (see `references/CHECK_CONNECTION_ACCEPTS.md` for full procedure):
+- Check accepts via LinkedIn Connections page (sorted by recently added) — NOT sent invitations
+- Send Step 2 welcome message from campaign template
+- Update execution status and calculate next action time
 
 **Reply Received**:
 - Set status to `replied`
